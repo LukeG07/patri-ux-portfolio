@@ -1,0 +1,48 @@
+#home{
+    background: #282a30;
+}
+
+.nav-container {
+    background: #f5f2f1;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem, 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        list-style: none;
+    }
+    #logo{
+        flex: 4;
+        height: 80px;
+        overflow: hidden;
+        color: black;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    img{
+        height: 200px;
+    }
+}
