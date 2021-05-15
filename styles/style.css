@@ -243,8 +243,6 @@ nav #logo img {
   position: cover;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  -webkit-filter: saturate(0.7);
-          filter: saturate(0.7);
 }
 
 .projects-showcase #projects .cards .card:hover {
