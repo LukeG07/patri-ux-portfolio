@@ -243,6 +243,8 @@ nav #logo img {
   position: cover;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  -webkit-filter: saturate(0.8);
+          filter: saturate(0.8);
 }
 
 .projects-showcase #projects .cards .card:hover {
@@ -260,7 +262,58 @@ nav #logo img {
 
 /* Project pages */
 .project-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 5%;
   color: #323232;
+  width: 90%;
+}
+
+.project-article p {
+  text-align: center;
+}
+
+.project-article .project-vid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+}
+
+.project-article .project-vid iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.project-article .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.project-article .project-info::before {
+  height: 0;
+}
+
+.project-article .project-info img {
+  max-width: 100%;
 }
 
 #about {
@@ -270,6 +323,31 @@ nav #logo img {
 
 #about h2 {
   margin-left: 5%;
+  margin-bottom: 32px;
+}
+
+#about .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 5%;
+}
+
+#about .about-container .about-pic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#about .about-container p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: justify;
 }
 
 #contact {
@@ -289,6 +367,34 @@ nav #logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-container .contact-pic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 70vh;
+}
+
+.contact-container .contact-pic img {
+  height: 100%;
+}
+
+.contact-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -296,17 +402,17 @@ nav #logo img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 40%;
   margin-left: 5%;
+  margin-top: 10rem;
   text-align: justify;
 }
 
-.contact-container p {
+.contact-info p {
   color: #282a30;
   margin-bottom: 32px;
 }
 
-.contact-container button {
+.contact-info button {
   position: relative;
   padding: 1em 1.5em;
   border: none;
@@ -320,7 +426,7 @@ nav #logo img {
       align-self: center;
 }
 
-.contact-container button::after, .contact-container button::before {
+.contact-info button::after, .contact-info button::before {
   content: '';
   display: block;
   position: absolute;
@@ -332,7 +438,7 @@ nav #logo img {
   border-radius: 2px;
 }
 
-.contact-container button::after {
+.contact-info button::after {
   bottom: 0;
   right: 0;
   border-top-color: transparent;
@@ -341,7 +447,7 @@ nav #logo img {
   border-right-color: #282a30;
 }
 
-.contact-container button::before {
+.contact-info button::before {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -350,7 +456,7 @@ nav #logo img {
   border-left-color: #282a30;
 }
 
-.contact-container button:hover:after, .contact-container button:hover:before {
+.contact-info button:hover:after, .contact-info button:hover:before {
   width: 100%;
   height: 100%;
 }
