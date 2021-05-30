@@ -1,5 +1,8 @@
 #home{
     background: #282a30;
+    &::before {
+        height: 0;
+    }
 }
 
 .nav-container {
@@ -42,6 +45,9 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
+    p {
+        width: 33.33%;
+    }
     img{
         height: 200px;
     }
