@@ -56,9 +56,47 @@ section:before {
     display:block;
 }
 
-@keyframes fade-in {
-    from {opacity: 0; transform: scale(.7,.7)}
-    to {opacity: 1;}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-bottom {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: transform 0.3s ease-in, opacity 1s ease-in;
+}
+
+.from-bottom.appear {
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+.from-left {
+    transform: translateX(-20rem);
+}
+
+.from-right {
+    transform: translateX(20rem);
+}
+
+.from-left, .from-right {
+    opacity: 0;
+    transition: transform 0.3s ease-in, opacity 1s ease-in;
+}
+
+.from-left.appear {
+    opacity: 1;
+    transform: translateX(0rem);
+}
+
+.from-right.appear {
+    opacity: 1;
+    transform: translateX(0rem);
 }
 
 @import "home";

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/mainFunctions.js" defer></script>
     <title>Patricias Portfolio</title>
 </head>
 <body>
@@ -14,27 +16,59 @@
         <div class="nav-container">
             <nav>
                 <div id="logo">
-                    <a href="#top"><img src="./img/thang.png" alt=""></a>
+                    <a href="#top"><img src="./img/LOGOWHALE.png" alt=""></a>
                 </div>
                 <ul>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
         <Section id="home">
             <div class="showcase">
-                <img src="./img/thank03.png" alt="">
-                <h1>PATRICIA SANTAENGRACIA</h1>
+                <img src="./img/LOGOwhale02.png" alt="">
+                <h1>PATRI SANTAENGRACIA</h1>
+                <div class="arrow-container">
+                    <a href="#projects"><div class="arrow"></div></a>
+                </div>
             </div>
         </Section>
         <div class="projects-showcase">
             <section id="projects">
-                <h2>Projects</h2>
+                <h2 class="fade-in">Projects</h2>
                 <div class="cards">
+                    <a href="./html/how-you-end-it.html">
+                        <div class="card slide-in from-bottom">
+                            <img src="./img/how-you-end-it/cover.jpg" alt="">
+                            <div class="card-overlay">
+                                <h3>How You End It...</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./html/paint-in-black-history.html">
+                        <div class="card slide-in from-bottom">
+                            <img src="./img/paint-in-black-history/cover.jpg" alt="">
+                            <div class="card-overlay">
+                                <h3>Paint in Black History</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./html/hitting-the-right-notes.html">
+                        <div class="card slide-in from-bottom">
+                            <img src="./img/hitting-the-right-notes/cover.jpg" alt="">
+                            <div class="card-overlay">
+                                <h3>Hitting the Right Notes</h3>
+                            </div>
+                        </div>
+                    </a>
                     <a href="./html/skin-cancer-is-black-business.html">
-                        <div class="card">
+                        <div class="card slide-in from-bottom">
                             <img src="./img/black-business/cover.jpg" alt="">
                             <div class="card-overlay">
                                 <h3>Skin Cancer Is Black Business</h3>
@@ -42,58 +76,34 @@
                         </div>
                     </a>
                     <a href="./html/simply-duolingo.html">
-                        <div class="card">
+                        <div class="card slide-in from-bottom">
                             <img src="./img/DUOLINGo/cover.jpg" alt="">
                             <div class="card-overlay">
                                 <h3>SIMply Duolingo</h3>
                             </div>
                         </div>
                     </a>
-                    <a href="./html/hitting-the-right-notes.html">
-                        <div class="card">
-                            <img src="./img/hitting-the-right-notes/cover.jpg" alt="">
+                    <a href="./html/period-poverty.html">
+                        <div class="card slide-in from-bottom">
+                            <img src="./img/period-poverty/cover.jpg" alt="">
                             <div class="card-overlay">
-                                <h3>Hitting the Right Notes</h3>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="./html/dobb-in-the-knobbs.html">
-                        <div class="card">
-                            <img src="./img/dobb-in-the-knobbs/cover.jpg" alt="">
-                            <div class="card-overlay">
-                                <h3>Dobb in the Knobbs</h3>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="./html/how-you-end-it.html">
-                        <div class="card">
-                            <img src="./img/how-you-end-it/cover.jpg" alt="">
-                            <div class="card-overlay">
-                                <h3>How You End It...</h3>
+                                <h3>Period Poverty</h3>
                             </div>
                         </div>
                     </a>
                     <a href="./html/local-shopping.html">
-                        <div class="card">
+                        <div class="card slide-in from-bottom">
                             <img src="./img/local-shopping/cover.jpg" alt="">
                             <div class="card-overlay">
                                 <h3>Tap Into Local</h3>
                             </div>
                         </div>
                     </a>
-                    <a href="./html/paint-in-black-history.html">
-                        <div class="card">
-                            <img src="./img/paint-in-black-history/cover.jpg" alt="">
+                    <a href="./html/dobb-in-the-knobbs.html">
+                        <div class="card slide-in from-bottom">
+                            <img src="./img/dobb-in-the-knobbs/cover.jpg" alt="">
                             <div class="card-overlay">
-                                <h3>Paint in Black History</h3>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="./html/period-poverty.html">
-                        <div class="card">
-                            <img src="./img/period-poverty/cover.jpg" alt="">
-                            <div class="card-overlay">
-                                <h3>Period Poverty</h3>
+                                <h3>Dobb in the Knobbs</h3>
                             </div>
                         </div>
                     </a>
@@ -101,27 +111,16 @@
             </section>
         </div>
         <section id="about">
-            <h2>About Me</h2>
+            <h2 class="fade-in">About Me</h2>
             <div class="about-container">
                 <div class="about-pic"><img src="" alt="about pic"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsum eius earum dolorum sed quos, animi aspernatur eum facilis provident debitis beatae ea! Totam quod a numquam quis soluta nulla.</p>
             </div>
         </section>
         <section id="contact">
-            <h2>Get in Touch!</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aut odit distinctio nihil laboriosam amet, recusandae repellat minus perferendis doloribus! Ea quas modi dolores quod delectus recusandae alias eveniet id.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus aut odit distinctio nihil laboriosam amet, recusandae repellat minus perferendis doloribus! Ea quas modi dolores quod delectus recusandae alias eveniet id.
-                    </p>
-                    <button type="button">
-                        <h4>Drop Me An Email</h4>
-                    </button>
-                </div>
-                <div class="contact-pic"><img src="./img/Email-min.png" alt="contact pic"></div>
+            <h2 class="fade-in">Get in Touch!</h2>
+            <div class="contact-container fade-in">
+                <p>patriciasrodriguez10@gmail.com</p>
             </div>
         </section>
     </main>
