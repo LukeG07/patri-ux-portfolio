@@ -243,8 +243,6 @@ nav #logo img {
   position: cover;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  -webkit-filter: saturate(0.8);
-          filter: saturate(0.8);
 }
 
 .projects-showcase #projects .cards .card:hover {
@@ -464,6 +462,7 @@ nav #logo img {
 footer {
   min-height: 10vh;
   background: #282a30;
+  margin-top: 2rem;
   padding-left: 10%;
   padding-right: 10%;
   display: -webkit-box;
