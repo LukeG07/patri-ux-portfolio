@@ -453,7 +453,7 @@ nav #logo img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #323232;
+  background: #282a30;
   min-height: 90vh;
 }
 
@@ -507,7 +507,7 @@ nav #logo img {
 }
 
 #contact {
-  background: #323232;
+  background: #282a30;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
