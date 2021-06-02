@@ -1,24 +1,28 @@
-const animateInItems = document.querySelectorAll(".animate-in-view");
-console.log(animateInItems)
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in")
 
 let observerOptions = {
     root: null,
-    rootMargin: "180px",
-    threshold: [0.50]
+    rootMargin: "0px 0px -100px 0px",
+    threshold: 0
   };
 
-observer = new IntersectionObserver(entries => {
+appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
     entries.forEach(entry => {
-        if (entry.intersectionRatio >= 0.5) {
-            entry.target.classList.add('is-visible');
-            console.log("in view")
-        } else {
-            entry.target.classList.remove('is-visible');
-            console.log("out of view")
+        if (!entry.isIntersecting) {
+          return;
+        } else{
+          entry.target.classList.add('appear');
+          appearOnScroll.unobserve(entry.target);
+          //console.log("in view");
         }
       });
 }, observerOptions);
 
-animateInItems.forEach(item => {
-  observer.observe(item);
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
 });
+
+sliders.forEach(slider => {
+  appearOnScroll.observe(slider);
+})
