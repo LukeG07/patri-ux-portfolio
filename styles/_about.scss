@@ -9,12 +9,17 @@
         display: flex;
         flex-direction: row;
         margin: 0 5%;
+        gap:10rem;
         .about-pic {
-            flex:1;
+            flex: 1;
+            img {
+                width: 100%;
+            }
         }
         p {
-            flex: 1;
+            flex: 2;
             text-align: justify;
         }
+        
     }
 }
