@@ -1,4 +1,6 @@
 #about {
+    display: flex;
+    flex-direction: column;
     background: #323232;
     min-height: 90vh;
     h2 {
@@ -21,5 +23,15 @@
             text-align: justify;
         }
         
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about {
+        align-items: center;
+    }
+    .about-container {
+        flex-direction: column !important;
+        gap:2rem !important;
     }
 }
