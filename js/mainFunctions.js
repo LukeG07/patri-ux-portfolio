@@ -3,7 +3,7 @@ const sliders = document.querySelectorAll(".slide-in")
 
 let observerOptions = {
     root: null,
-    rootMargin: "0px 0px -100px 0px",
+    rootMargin: "0px 0px 0px 0px",
     threshold: 0
   };
 

@@ -5,10 +5,11 @@ html {
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 body{
-    color: white;
+    color: #F6C463;
+    background-color: #4D6B6B;
     font-family: 'Franklin Gothic Medium';
 }
 h1{
@@ -46,15 +47,15 @@ a{
     font-family: quasimoda-2, sans-serif;
     font-weight: 100;
     font-style: normal;
-    color: #282a30;
+    color: #F6C463;
     text-decoration: none;
 }
 
-section:before {
-    height: 100px;
-    content: "";
-    display:block;
-}
+// section:before {
+//     height: 100px;
+//     content: "";
+//     display:block;
+// }
 
 .fade-in {
     opacity: 0;
@@ -67,7 +68,7 @@ section:before {
 
 .from-bottom {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(40rem);
     transition: transform 0.3s ease-in, opacity 1s ease-in;
 }
 
@@ -116,3 +117,8 @@ section:before {
 @import "about";
 @import "contact";
 @import "footer";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+

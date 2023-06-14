@@ -1,47 +1,62 @@
 /* Project home showcase */
-.projects-showcase {
-    background: #f5f2f1;
-    #projects {
-        width: 90%;
-        min-height: 100vh;
-        margin: auto;
+#projects-showcase {
+    //background: #ECEEE3;
+    padding: 10vh 0;
+    .projects {
         display: flex;
         flex-direction: column;
-        h2 {
-            color: #282a30;
+        background-color: #ECEEE3;
+        scroll-snap-align: start;
+        padding: 6rem 0;
+        .project-header {
+            width: 100%;
+            padding: 3rem 6rem;
+            h3 {
+                font-family: 'GFS Didot', serif;
+                font-weight: 700;
+                color: #4D6B59;
+            }
         }
         .cards {
+            width: 100%;
+            height: 60vh;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: center;
             .card {
-                height: 400px;
-                width: 300px;
-                position: relative;
-                background-color: #323232;
-                border-radius: 2rem;
-                margin: 3rem 3rem;
                 overflow: hidden;
+                flex: 1 0 0;
+                position: relative;
+                background-color: black;
                 justify-content: center;
                 align-content: center;
+                min-width: 20rem;
                 /* Add shadow to cards to increase contrast with white bg */
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
                 /* On mouse-over, add a deeper shadow */
                 .card-overlay {
-                    width: 80%;
+                    width: 100%;
                     transition: .2s;
                     opacity: 0;
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    // top: 50%;
+                    // left: 50%;
+                    // // transform: translate(-50%, -50%);
                     text-align: center;
                     color: white;
+                    img {
+                        width: 100%;
+                        // height: 60vh;
+                        object-fit: cover;
+                        display: block;
+                        transition: .5s ease;
+                    }
                 }
                 img {
-                    max-width: 100%;
-                    position: cover;
+                    width: 100%;
+                    height: 60vh;
+                    object-fit: cover;
+                    display: block;
                     transition: .5s ease;
                 }
                 /* On hover, increase shadow and decrease img opactity*/
@@ -51,11 +66,25 @@
                         opacity: 1;
                     }
                     img {
-                        opacity: 0.3;
+                        opacity: 0.7;
                     }
                 }
+                .card-content {
+                    padding: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    color: #fff;
+                    padding: 20px;
+                    width: 100%;
+                  }
             }
         }
+        // .card::after {
+        //     content: "";
+        //     display: block;
+        //     padding-bottom: 100%;
+        //   }
     }
 }
 

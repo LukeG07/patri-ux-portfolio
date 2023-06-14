@@ -1,18 +1,20 @@
 footer {
-    min-height: 10vh;
-    background: #f5f2f1;
-    padding-left: 10%;
-    padding-right: 10%;
+    min-height: 25vh;
+    background: #4D6B6B;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    ul {
-        display: none;
-        justify-content: space-between;
-        flex: 1;
-        list-style: none;
-        img {
-            height: 24px;
+    justify-content: center;
+    margin: 5rem 0;
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        border: #FFD687 1px solid;
+        padding: 4rem 8rem;
+        text-align: center;
+        gap: 2rem;
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
         }
     }
 }
