@@ -176,7 +176,7 @@ nav #logo p span {
   min-height: 90vh;
   align-items: center;
   text-align: center;
-  padding-left: 25%;
+  padding-left: 30%;
   padding-top: 5%;
 }
 .showcase .container {
@@ -185,13 +185,13 @@ nav #logo p span {
   height: 70%;
 }
 .showcase img {
-  height: 100%;
+  width: 80%;
   transform: scaleX(-1);
 }
 .showcase .text-overlay {
   position: absolute;
-  top: 70%;
-  left: 30%;
+  top: 80%;
+  left: 20%;
   color: #F6C463;
   padding: 20px;
   text-align: left;
