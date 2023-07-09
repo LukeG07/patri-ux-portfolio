@@ -54,41 +54,36 @@ nav {
     }
 }
 
-.showcase {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+.hero {
+    width: 100%;
+    padding: 2% 5% 0 5%;
     min-height: 90vh;
-    align-items: center;
-    text-align: center;
-    padding-left: 30%;
-    padding-top: 5%;
-    .container {
+    .hero-container {
         position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         width: 100%;
-        height: 70%;
-      }
-      
-      img {
-        width: 80%;
-        transform: scaleX(-1);
-      }
-      
-      .text-overlay {
+        padding-right: 5%;
+        img {
+            width: 60%;
+            transform: scaleX(-1);
+        }
+        .text-overlay {
         position: absolute;
         top: 80%;
-        left: 20%;
+        left: 5%;
         color: #F6C463;
         padding: 20px;
         text-align: left;
-        transform: translate(-50%, -50%);
+        transform: translate(-0%, -50%);
         width: 40%;
         p {
             font-family: Didot;
             font-weight: 700;
             font-size: 3rem;
         }
-        
+        }
       }
 }
 

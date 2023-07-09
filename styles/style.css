@@ -169,36 +169,34 @@ nav #logo p span {
   font-weight: 700;
 }
 
-.showcase {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  min-height: 90vh;
-  align-items: center;
-  text-align: center;
-  padding-left: 30%;
-  padding-top: 5%;
-}
-.showcase .container {
-  position: relative;
+.hero {
   width: 100%;
-  height: 70%;
+  padding: 2% 5% 0 5%;
+  min-height: 90vh;
 }
-.showcase img {
-  width: 80%;
+.hero .hero-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 5%;
+}
+.hero .hero-container img {
+  width: 60%;
   transform: scaleX(-1);
 }
-.showcase .text-overlay {
+.hero .hero-container .text-overlay {
   position: absolute;
   top: 80%;
-  left: 20%;
+  left: 5%;
   color: #F6C463;
   padding: 20px;
   text-align: left;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   width: 40%;
 }
-.showcase .text-overlay p {
+.hero .hero-container .text-overlay p {
   font-family: Didot;
   font-weight: 700;
   font-size: 3rem;
@@ -292,13 +290,12 @@ nav #logo p span {
 
 /* Project pages */
 .project-article {
+  background-color: #ECEEE3;
   display: flex;
   gap: 5rem;
   align-items: center;
   flex-direction: column;
-  margin: 2rem 0 5% 5%;
   color: #323232;
-  width: 90%;
 }
 .project-article p {
   text-align: center;
@@ -460,4 +457,7 @@ footer .footer-container {
 footer .footer-container p {
   font-family: "Inter", sans-serif;
   font-size: 3rem;
+}
+footer .footer-container img {
+  width: 500px;
 }/*# sourceMappingURL=style.css.map */
