@@ -256,14 +256,11 @@ nav #logo p span {
 }
 #projects-showcase .projects .cards .card .card-overlay img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
   transition: 0.5s ease;
 }
 #projects-showcase .projects .cards .card img {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
