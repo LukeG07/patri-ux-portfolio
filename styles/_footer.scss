@@ -14,10 +14,26 @@ footer {
         gap: 2rem;
         p {
             font-family: 'Inter', sans-serif;
-            font-size: 3rem;
         }
         img {
-            width: 500px;
+            width: 300px;
+        }
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    footer {
+        .footer-container {
+            padding: 0rem 0rem; /* Adjust padding for smaller screens */
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        .footer-container {
+            padding: 1rem 2rem; /* Adjust padding for even smaller screens */
         }
     }
 }

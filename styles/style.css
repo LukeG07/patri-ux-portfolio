@@ -53,7 +53,7 @@ p {
 }
 
 a {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: quasimoda-2, sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -104,15 +104,24 @@ a {
   transform: translateX(0rem);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 4rem;
   }
   h2 {
     font-size: 3rem;
   }
-  p {
+  h3 {
     font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  a {
+    font-size: 1.5rem;
   }
 }
 #home::before {
@@ -138,35 +147,48 @@ nav {
   width: 90%;
   margin: auto;
   min-height: 10vh;
-  padding: 3rem, 0rem;
+  padding: 1rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
-  list-style: none;
-}
-nav ul .icon {
-  display: none;
-}
-nav #logo {
+
+#logo {
   display: flex;
   flex: 4;
   height: 80px;
   overflow: hidden;
   align-items: center;
 }
-nav #logo p {
+#logo p {
   font-size: 3rem;
   padding-right: 2rem;
   border-right: 0.1rem solid #F6C463;
   font-family: "Inter", sans-serif;
 }
-nav #logo p span {
+#logo p span {
   font-weight: 700;
+}
+
+.burger-menu {
+  display: none; /* Initially hide the burger menu */
+}
+.burger-menu .line {
+  width: 30px;
+  height: 3px;
+  background-color: #F6C463;
+  margin-bottom: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex: 2;
+  list-style: none;
+}
+.menu .icon {
+  display: none;
 }
 
 .hero {
@@ -202,9 +224,61 @@ nav #logo p span {
   font-size: 3rem;
 }
 
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 4rem;
+/* Media queries */
+@media (max-width: 768px) {
+  .hero .hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 5%;
+    /* CSS rules for screens smaller than or equal to 768px */
+  }
+  .hero .hero-container .text-overlay {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    padding: 0px;
+    transform: translate(0%, 0%);
+    width: 80%;
+  }
+  .hero .hero-container img {
+    width: 100%;
+    transform: scaleX(-1);
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    position: fixed;
+    left: -100%;
+    top: 10vh;
+    transform: translate(0%, 50%);
+    flex-direction: column;
+    background-color: #4D6B6B;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2);
+  }
+  .menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .burger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 /* Project home showcase */
@@ -453,8 +527,19 @@ footer .footer-container {
 }
 footer .footer-container p {
   font-family: "Inter", sans-serif;
-  font-size: 3rem;
 }
 footer .footer-container img {
-  width: 500px;
+  width: 300px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  footer .footer-container {
+    padding: 0rem 0rem; /* Adjust padding for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  footer .footer-container {
+    padding: 1rem 2rem; /* Adjust padding for even smaller screens */
+  }
 }/*# sourceMappingURL=style.css.map */

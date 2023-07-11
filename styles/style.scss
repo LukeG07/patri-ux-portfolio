@@ -43,7 +43,7 @@ p{
     font-style: normal;
 }
 a{
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: quasimoda-2, sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -100,15 +100,24 @@ a{
     transform: translateX(0rem);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     h1 {
         font-size: 4rem;
     }
     h2 {
         font-size: 3rem;
     }
-    p {
+    h3 {
         font-size: 2rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    a{
+        font-size: 1.5rem;
     }
 }
 
