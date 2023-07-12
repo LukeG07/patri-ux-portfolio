@@ -19,58 +19,31 @@
         }
         .cards {
             width: 100%;
-            height: 60vh;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             .card {
-                overflow: hidden;
                 flex: 1 0 0;
                 position: relative;
-                background-color: black;
-                justify-content: center;
-                align-content: center;
-                min-width: 20rem;
-                /* Add shadow to cards to increase contrast with white bg */
-                //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                /* On mouse-over, add a deeper shadow */
-                .card-overlay {
-                    width: 100%;
-                    transition: .2s;
-                    opacity: 0;
-                    position: absolute;
-                    // top: 50%;
-                    // left: 50%;
-                    // // transform: translate(-50%, -50%);
-                    text-align: center;
-                    color: white;
-                    img {
-                        width: 100%;
-                        // height: 60vh;
-                        //object-fit: cover;
-                        //display: block;
-                        transition: .5s ease;
-                    }
-                }
-                img {
-                    width: 100%;
-                    height: 50vh;
-                    object-fit: cover;
-                    display: block;
-                    transition: .5s ease;
-                }
-                /* On hover, increase shadow and decrease img opactity*/
-                &:hover {
-                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+                .card-img {
                     .card-overlay {
-                        opacity: 1;
+                        width: 100%;
+                        transition: .2s;
+                        opacity: 0;
+                        text-align: center;
+                        color: white;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            display: block;
+                            transition: .5s ease;
+                            min-height: 200px;
+                        }
                     }
-                    img {
-                        opacity: 0.7;
-                    }
-                }
+                 }
+                /* On hover, increase shadow and decrease img opactity*/
                 .card-content {
-                    padding: 20px;
+                    //padding: 20px;
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -79,12 +52,18 @@
                     width: 100%;
                   }
             }
+            &:hover {
+                .card-img {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+                    .card-overlay {
+                        opacity: 1;
+                    }
+                    img {
+                        opacity: 0.7;
+                    }
+                }
+            }
         }
-        // .card::after {
-        //     content: "";
-        //     display: block;
-        //     padding-bottom: 100%;
-        //   }
     }
 }
 
@@ -95,11 +74,13 @@
     gap: 5rem;
     align-items: center;
     flex-direction: column;
-    //margin: 2rem 0 5% 5%;
+    padding: 0 10%;
     color: #323232;
-    //width: 90%;
+    width: 100%;
+    color: #4D6B59;
     p {
-        text-align: center;
+        font-weight: 700;
+        text-align: justify;
     }
     .project-vid {
         display: flex;
@@ -120,8 +101,17 @@
             height: 0;
         }
         img {
-            max-width:100%;
+            width: 80%;
+            margin: 0 auto;
         }
+        ol {
+            padding-left: 1.5em; /* Adjust the padding as needed */
+            list-style-position: inside;
+            li {
+                font-weight: 700;
+                text-align: justify;
+            }
+          }
     }
 }
 

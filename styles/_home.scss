@@ -5,6 +5,7 @@
 }
 
 .nav-container {
+    height: 80px;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -20,9 +21,9 @@
 }
 
 nav {
+    height: 100%;
     width: 90%;
     margin: auto;
-    min-height: 10vh;
     padding: 1rem 0rem;
     display: flex;
     justify-content: space-between;
@@ -142,21 +143,20 @@ nav {
 
     .menu {
         position: fixed;
-        left: -100%;
-        top: 10vh;
-        transform: translate(-0%, 50%);
+        top: -100%;
+        transform: translate(-0%, 0%);
         flex-direction: column;
         background-color: #4D6B6B;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.5s;
         box-shadow:
             0 10px 27px rgb(0, 0, 0, 0.2);
     }
 
     .menu.active {
         left: 0;
+        top: 80px;
     }
 
     .nav-item {

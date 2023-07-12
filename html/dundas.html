@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
-    <title>Patricia Santaengracia - HA</title>
+    <title>Patricia Santaengracia - dundas</title>
 </head>
 <body>
     <main>
@@ -14,28 +14,95 @@
             <nav>
               <div id="logo">
                 <a href="../index.html"><p><span>PATRICIA</span> SANTAENGRACIA</p></a>
-                  <div class="verticalLine"></div>
+                <div class="verticalLine"></div>
               </div>
-              <ul>
-                <li><a href="../index.html#projects-showcase">Projects</a></li>
-                <li><a href="../html/about.html">About Me</a></li>
-                <li><a href="#footer">Contact</a></li>
+              <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="../index.html#projects-showcase">Projects</a>
+                </li>
+                <li class="menu-item">
+                  <a href="../html/about.html">About Me</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#footer">Contact</a>
+                </li>
               </ul>
             </nav>
+            <script src="../scripts/script.js"></script>
             <hr>
-        </div>
+          </div>
         <article class="project-article">
             <h2>Dundas: Find your dream home</h2>
-            <p></p>
             <section class="project-info">
-                <!-- <img src="../img/opus/CleanShot 2022-05-10 at 14.09 1 (1).png" alt="no findy">
-                <img src="../img/opus/CleanShot 2022-05-10 at 15.19 1.png" alt="no findy">
-                <img src="../img/opus/Screenshot 2022-06-20 at 20.39.26.png" alt="no findy">
-                <img src="../img/opus/Wireframe01.png" alt="no findy">
-                <img src="../img/opus/final design01.png" alt="no findy">
-                <img src="../img/opus/Final design02.png" alt="no findy">
-                <img src="../img/opus/Final design03.png" alt="no findy">
-                <img src="../img/opus/homeScreen01.png" alt="no findy"> -->
+                <h3>Overview</h3>
+                <p>
+                    Dundas is a development in Scotland that offers a tool on its website to assist potential buyers in finding their dream home. I was assigned the task of reimagining the "Find Your New Home" tool on the Dundas website.
+                </p>
+                <h3>Problem</h3>
+                <p>
+                    The existing "Find Your New Home" tool was failing to meet user needs. The tool discarded any house or flat that didn't meet all of the buyer's demands, resulting in zero results for most users. Additionally, if users wanted to change any parameters, they had to return to the home page and redo the entire test.
+                </p>
+                <h3>Objective</h3>
+                <p>
+                    The objective of this project was to rethink the tool in order to deliver satisfactory results to users, by identifying and addressing the user's pain points within the application, keeping in mind the cost of developing.
+                </p>
+                <h3>Process</h3>
+                <p>
+                    To identify the pain points in the tool, I created a user flow to gain a better understanding of how users navigate through it. Furthermore, I conducted user testing with four individuals who fell within Dundas's target demographic: first-time buyers and downsizers.
+                </p>
+                <img src="../img/dundas/original_userflow.png" alt="Original User Flow">
+                <p>
+                    Through this process, I identified three pain points:
+                </p>
+                <ol>
+                    <li>No results being displayed.</li>
+                    <li>The need to restart the test when changing preferences.</li>
+                    <li>Unnecessary questions that didn't apply to the user's preferences (e.g., asking about gardens when flats were selected).</li>
+                </ol>
+                <p>
+                    The overall feedback for the tool was a mix of promise and disappointment. During the user testing, I noticed that people often have different preferences and are willing to be flexible. For example, a home at Dundas might have fewer rooms than desired, but the price could be within budget. Users were missing out on potential matches due to rigid criteria. I confirmed this observation through desktop research, which revealed that buyers now prioritize different features, influenced by factors such as the COVID-19 pandemic and energy crisis, with location becoming less important.
+                </p>
+                <h3>Brainstorming</h3>
+                <p>
+                    We started off with a brainstorming session where we focused on reframing the problem and coming up with solutions.
+                </p>
+                <img src="../img/dundas/questions.jpg" alt="Question Image">
+                <img src="../img/dundas/image_4.jpg" alt="Image 4">
+                <p>
+                    Afterwards, we worked on the new user flow that would improve the experience for all users.
+                </p>
+                <img src="../img/dundas/proposed_user_flow.png" alt="Proposed User Flow 2">
+                <p>
+                    The next steps were to come up with some sketches and wireframes based on the new ideas and information gathered. My initial focus was to ensure that the tool provided results in most, if not all, cases. I came up with the idea of matching buyers with potential dream homes, rather than a single dream home. Since certain features are negotiable and vary among individuals, it seemed wasteful not to show nearly perfect matches. I sketched a results page that displayed matches ranging from perfect to okay, giving users a chance to find unexpected options that might be even better. In case there were to be any technical difficulties with this idea, I created a second version that doesn't display or organize the results by the best to least perfect match. Instead, it would just show results that came close enough to the buyer's preferences. I then proceeded to create some wireframes for both.
+                </p>
+                <img src="../img/dundas/wireframe_1.png" alt="Wireframe Option 1">
+                <img src="../img/dundas/wireframe_2.png" alt="Wireframe Option 2">
+                <p>
+                    I presented this idea to the head of design and the art director, and both were well-received. After a brief discussion, we all agreed on the second option, due to its simplicity.
+                </p>
+                <p>
+                    Next, I focused on the proposal for the new display of the entire results page. Once the wireframes were done, the Head of Design continued from there and completed the design.
+                </p>
+                <img src="../img/dundas/result_wireframe_2.png" alt="Result Page Wireframe 2">
+                <p>
+                    Afterwards, we aimed to streamline the process of changing preferences. Instead of forcing users to restart the test from the home page, I proposed adding a "Change Preferences" option on the result page. This would allow users to modify their preferences individually, making the process faster and more user-friendly. However, due to time and technical constraints, we compromised by making it easier to retake the test to change preferences. We added a button that provided quick access to the test from the result page and added the preferences selected by the user at the top.
+                </p>
+                <img src="proposal_image.jpg" alt="Proposal Image">
+
+                <p>
+                    A similar issue arose with the "unnecessary questions" at the end of the test. Originally, the plan was to have different questions for flats and houses. However, once again, due to time and technical limitations, we decided to remove those questions until the feature could be properly implemented. As a temporary solution, we agreed on eliminating those questions entirely.
+                </p>
+                <img src="final_image.jpg" alt="Final Image">
+
+                <h3>Outcome</h3>
+                <p>
+                    The updated version of the "Find Your New Home" tool was successfully implemented on the Dundas website.
+                </p>
             </section>
         </article>
     </main>
@@ -46,11 +113,6 @@
             <p>Patriciasrodriguez10@gmail.com</p>
             <img src="../img/moth.png" alt="no findy">
         </div>
-          <!-- <ul>
-              <li><a href="#"><img src="./img/li-logo.png" alt=""></a></li>
-              <li><a href="#"><img src="./img/twitter-logo.png" alt=""></a></li>
-              <li><a href="#"><img src="./img/insta-logo.png" alt=""></a></li>
-          </ul> -->
-      </footer>
+    </footer>
 </body>
 </html>

@@ -15,28 +15,28 @@ body{
 h1{
     font-size: 8rem;
     font-family: quasimoda-2, sans-serif;
-    font-weight: 100;
+    font-weight: bolder;
     font-style: normal;
 }
 h2 {
     font-size: 6rem;
     font-family: quasimoda-2, sans-serif;
-    font-weight: 100;
+    font-weight: bolder;
     font-style: normal;
 }
 h3{
     font-size: 3.5rem;
     font-family: quasimoda-2, sans-serif;
-    font-weight: 1000;
+    font-weight: bolder;
     font-style: normal;
 }
 h4{
     font-size: 2rem;
     font-family: quasimoda-2, sans-serif;
-    font-weight: 100;
+    font-weight: bolder;
     font-style: normal;
 }
-p{
+p, li{
     font-size: 2.5rem;
     font-family: quasimoda-2, sans-serif;
     font-weight: 100;
@@ -50,12 +50,6 @@ a{
     color: #F6C463;
     text-decoration: none;
 }
-
-// section:before {
-//     height: 100px;
-//     content: "";
-//     display:block;
-// }
 
 .fade-in {
     opacity: 0;
