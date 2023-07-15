@@ -23,7 +23,7 @@
     }
     #logo{
         display: flex;
-        flex: 4;
+        flex: 3;
         height: 80px;
         overflow: hidden;
         align-items: center;
@@ -49,25 +49,6 @@ nav {
     align-items: center;
 }
 
-
-.nav-container-alt {
-    @extend .nav-container;
-    background-color: #ECEEE3;
-    #logo{
-        p {
-            color: #4D6B6B;
-            border-right: 0.1rem solid #4D6B6B;
-
-        }
-    }
-    hr {
-        background-color: #4D6B6B;
-    }
-    a {
-        color: #4D6B6B;
-    }
-}
-
 .burger-menu {
     display: none; /* Initially hide the burger menu */
     .line {
@@ -86,6 +67,30 @@ nav {
     list-style: none;
     .icon {
         display: none;
+    }
+}
+
+
+.nav-container-alt {
+    @extend .nav-container;
+    background-color: #ECEEE3;
+    #logo{
+        p {
+            color: #4D6B6B;
+            border-right: 0.1rem solid #4D6B6B;
+
+        }
+    }
+    hr {
+        background-color: #4D6B6B;
+    }
+    a {
+        color: #4D6B6B;
+    }
+    .burger-menu {
+        .line {
+            background-color: #4D6B6B;
+        }
     }
 }
 

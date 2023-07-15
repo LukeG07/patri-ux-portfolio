@@ -146,7 +146,7 @@ a {
 }
 .nav-container #logo, .nav-container-alt #logo {
   display: flex;
-  flex: 4;
+  flex: 3;
   height: 80px;
   overflow: hidden;
   align-items: center;
@@ -171,20 +171,6 @@ nav {
   align-items: center;
 }
 
-.nav-container-alt {
-  background-color: #ECEEE3;
-}
-.nav-container-alt #logo p {
-  color: #4D6B6B;
-  border-right: 0.1rem solid #4D6B6B;
-}
-.nav-container-alt hr {
-  background-color: #4D6B6B;
-}
-.nav-container-alt a {
-  color: #4D6B6B;
-}
-
 .burger-menu {
   display: none; /* Initially hide the burger menu */
 }
@@ -204,6 +190,23 @@ nav {
 }
 .menu .icon {
   display: none;
+}
+
+.nav-container-alt {
+  background-color: #ECEEE3;
+}
+.nav-container-alt #logo p {
+  color: #4D6B6B;
+  border-right: 0.1rem solid #4D6B6B;
+}
+.nav-container-alt hr {
+  background-color: #4D6B6B;
+}
+.nav-container-alt a {
+  color: #4D6B6B;
+}
+.nav-container-alt .burger-menu .line {
+  background-color: #4D6B6B;
 }
 
 .hero {
