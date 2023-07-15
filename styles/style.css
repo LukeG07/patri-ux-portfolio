@@ -348,15 +348,6 @@ nav {
   transition: 0.2s ease;
   min-height: 400px;
 }
-.cards .card .card-img:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-}
-.cards .card .card-img:hover .card-overlay {
-  opacity: 1;
-}
-.cards .card .card-img:hover img {
-  opacity: 0.7;
-}
 .cards .card .card-content {
   position: absolute;
   bottom: 0;
@@ -364,6 +355,15 @@ nav {
   color: #fff;
   padding: 20px;
   width: 100%;
+}
+.cards .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+.cards .card:hover .card-overlay {
+  opacity: 1;
+}
+.cards .card:hover img {
+  opacity: 0.7;
 }
 
 /* Project pages */

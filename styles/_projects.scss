@@ -43,15 +43,6 @@
                     min-height: 400px;
                 }
             }
-            &:hover {
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-                .card-overlay {
-                    opacity: 1;
-                }
-                img {
-                    opacity: 0.7;
-                }
-            }
          }
         /* On hover, increase shadow and decrease img opactity*/
         .card-content {
@@ -63,7 +54,17 @@
             padding: 20px;
             width: 100%;
           }
+          &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+            .card-overlay {
+                opacity: 1;
+            }
+            img {
+                opacity: 0.7;
+            }
+        }
     }
+    
 }
 
 
