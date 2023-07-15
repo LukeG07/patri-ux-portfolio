@@ -10,10 +10,15 @@ footer {
         flex-direction: column;
         border: #FFD687 1px solid;
         padding: 4rem 8rem;
-        text-align: center;
         gap: 2rem;
+        justify-content: center;
+        align-items: center;
         p {
+            color: #FFD687;
             font-family: 'Inter', sans-serif;
+        }
+        h3 {
+            color: #FFD687;
         }
         img {
             width: 300px;

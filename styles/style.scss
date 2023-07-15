@@ -8,46 +8,45 @@ html {
     box-sizing: border-box;
 }
 body{
-    color: #F6C463;
     background-color: #4D6B6B;
     font-family: 'Franklin Gothic Medium';
+    overflow-x: hidden;
 }
 h1{
     font-size: 8rem;
-    font-family: quasimoda-2, sans-serif;
-    font-weight: bolder;
+    font-family: Avenir;
+    font-weight: 500;
     font-style: normal;
 }
 h2 {
-    font-size: 6rem;
-    font-family: quasimoda-2, sans-serif;
-    font-weight: bolder;
+    font-size: 4.8rem;
+    font-family: Della Respira;
+    font-weight: 500;
     font-style: normal;
 }
 h3{
     font-size: 3.5rem;
-    font-family: quasimoda-2, sans-serif;
-    font-weight: bolder;
+    font-family: Avenir;
+    font-weight: 500;
     font-style: normal;
 }
 h4{
-    font-size: 2rem;
-    font-family: quasimoda-2, sans-serif;
-    font-weight: bolder;
+    font-size: 3rem;
+    font-family: Avenir;
+    font-weight: 500;
     font-style: normal;
 }
 p, li{
     font-size: 2.5rem;
-    font-family: quasimoda-2, sans-serif;
-    font-weight: 100;
+    font-family: Avenir;
+    font-weight: 400;
     font-style: normal;
 }
 a{
-    font-size: 3rem;
-    font-family: quasimoda-2, sans-serif;
+    font-size: 2rem;
+    font-family: Avenir;
     font-weight: 100;
     font-style: normal;
-    color: #F6C463;
     text-decoration: none;
 }
 
@@ -122,6 +121,4 @@ a{
 @import "footer";
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -12,52 +11,51 @@ html {
 }
 
 body {
-  color: #F6C463;
   background-color: #4D6B6B;
   font-family: "Franklin Gothic Medium";
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 8rem;
-  font-family: quasimoda-2, sans-serif;
-  font-weight: bolder;
+  font-family: Avenir;
+  font-weight: 500;
   font-style: normal;
 }
 
 h2 {
-  font-size: 6rem;
-  font-family: quasimoda-2, sans-serif;
-  font-weight: bolder;
+  font-size: 4.8rem;
+  font-family: Della Respira;
+  font-weight: 500;
   font-style: normal;
 }
 
 h3 {
   font-size: 3.5rem;
-  font-family: quasimoda-2, sans-serif;
-  font-weight: bolder;
+  font-family: Avenir;
+  font-weight: 500;
   font-style: normal;
 }
 
 h4 {
-  font-size: 2rem;
-  font-family: quasimoda-2, sans-serif;
-  font-weight: bolder;
+  font-size: 3rem;
+  font-family: Avenir;
+  font-weight: 500;
   font-style: normal;
 }
 
 p, li {
   font-size: 2.5rem;
-  font-family: quasimoda-2, sans-serif;
-  font-weight: 100;
+  font-family: Avenir;
+  font-weight: 400;
   font-style: normal;
 }
 
 a {
-  font-size: 3rem;
-  font-family: quasimoda-2, sans-serif;
+  font-size: 2rem;
+  font-family: Avenir;
   font-weight: 100;
   font-style: normal;
-  color: #F6C463;
   text-decoration: none;
 }
 
@@ -128,7 +126,7 @@ a {
   height: 0;
 }
 
-.nav-container {
+.nav-container, .nav-container-alt {
   height: 80px;
   position: sticky;
   top: 0;
@@ -136,12 +134,31 @@ a {
   align-items: center;
   background-color: #4D6B6B;
 }
-.nav-container hr {
+.nav-container a, .nav-container-alt a {
+  color: #F6C463;
+}
+.nav-container hr, .nav-container-alt hr {
   background-color: #F6C463;
   width: 95%;
   margin: auto;
   border-width: 0;
   height: 0.1rem;
+}
+.nav-container #logo, .nav-container-alt #logo {
+  display: flex;
+  flex: 4;
+  height: 80px;
+  overflow: hidden;
+  align-items: center;
+}
+.nav-container #logo p, .nav-container-alt #logo p {
+  color: #F6C463;
+  font-size: 2.2rem;
+  padding-right: 2rem;
+  border-right: 0.1rem solid #F6C463;
+}
+.nav-container #logo p span, .nav-container-alt #logo p span {
+  font-weight: 700;
 }
 
 nav {
@@ -154,21 +171,18 @@ nav {
   align-items: center;
 }
 
-#logo {
-  display: flex;
-  flex: 4;
-  height: 80px;
-  overflow: hidden;
-  align-items: center;
+.nav-container-alt {
+  background-color: #ECEEE3;
 }
-#logo p {
-  font-size: 3rem;
-  padding-right: 2rem;
-  border-right: 0.1rem solid #F6C463;
-  font-family: "Inter", sans-serif;
+.nav-container-alt #logo p {
+  color: #4D6B6B;
+  border-right: 0.1rem solid #4D6B6B;
 }
-#logo p span {
-  font-weight: 700;
+.nav-container-alt hr {
+  background-color: #4D6B6B;
+}
+.nav-container-alt a {
+  color: #4D6B6B;
 }
 
 .burger-menu {
@@ -301,33 +315,43 @@ nav {
   font-weight: 700;
   color: #4D6B59;
 }
-#projects-showcase .projects .cards {
+
+.cards {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-#projects-showcase .projects .cards .card {
+.cards .card {
   flex: 1 0 0;
   position: relative;
   /* On hover, increase shadow and decrease img opactity*/
 }
-#projects-showcase .projects .cards .card .card-img .card-overlay {
+.cards .card .card-img .card-overlay {
   width: 100%;
   transition: 0.2s;
   opacity: 0;
   text-align: center;
   color: white;
 }
-#projects-showcase .projects .cards .card .card-img .card-overlay img {
+.cards .card .card-img .card-overlay img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   transition: 0.5s ease;
-  min-height: 200px;
+  min-height: 400px;
 }
-#projects-showcase .projects .cards .card .card-content {
+.cards .card .card-img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+.cards .card .card-img:hover .card-overlay {
+  opacity: 1;
+}
+.cards .card .card-img:hover img {
+  opacity: 0.7;
+}
+.cards .card .card-content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -335,105 +359,99 @@ nav {
   padding: 20px;
   width: 100%;
 }
-#projects-showcase .projects .cards:hover .card-img {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-}
-#projects-showcase .projects .cards:hover .card-img .card-overlay {
-  opacity: 1;
-}
-#projects-showcase .projects .cards:hover .card-img img {
-  opacity: 0.7;
-}
 
 /* Project pages */
 .project-article {
   background-color: #ECEEE3;
   display: flex;
-  gap: 5rem;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  padding: 0 10%;
+  padding: 15rem 15%;
   color: #323232;
   width: 100%;
   color: #4D6B59;
+  gap: 6rem;
 }
 .project-article p {
-  font-weight: 700;
   text-align: justify;
 }
-.project-article .project-vid {
-  display: flex;
-  position: relative;
-  padding-bottom: 56.25%;
-  width: 100%;
-}
-.project-article .project-vid iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.project-article .project-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.project-article .project-info::before {
-  height: 0;
-}
-.project-article .project-info img {
-  width: 80%;
-  margin: 0 auto;
-}
-.project-article .project-info ol {
+.project-article ol {
   padding-left: 1.5em; /* Adjust the padding as needed */
   list-style-position: inside;
 }
-.project-article .project-info ol li {
-  font-weight: 700;
+.project-article ol li {
   text-align: justify;
 }
 
-@media only screen and (max-width: 600px) {
-  #projects {
-    align-items: center;
-  }
+.img-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
-#about {
-  display: flex;
-  flex-direction: column;
-  background: #282a30;
-  min-height: 90vh;
+
+.no-btm-padding {
+  padding-bottom: 0;
 }
-#about h2 {
-  margin-left: 5%;
-  margin-bottom: 32px;
-}
-#about .about-container {
+
+.bi-image {
   display: flex;
   flex-direction: row;
-  margin: 0 5%;
-  gap: 10rem;
-}
-#about .about-container .about-pic {
+  gap: 2rem;
   flex: 1;
 }
-#about .about-container .about-pic img {
-  width: 100%;
-}
-#about .about-container p {
-  flex: 2;
-  text-align: justify;
+.bi-image img {
+  width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
-  #about {
-    align-items: center;
-  }
-  .about-container {
-    flex-direction: column !important;
-    gap: 2rem !important;
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.project-section span {
+  font-weight: bolder;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.contribution-container {
+  display: flex;
+  flex-direction: row;
+}
+.contribution-container .contribution-item {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .cards {
+    flex-direction: column;
   }
 }
+.portrait-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.portrait-container .portrait-description {
+  flex: 1 1 0;
+}
+
+.portrait {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.portrait img {
+  min-width: 0;
+  width: 100%;
+}
+
 #contact {
   background: #282a30;
   display: flex;
@@ -521,11 +539,16 @@ footer .footer-container {
   flex-direction: column;
   border: #FFD687 1px solid;
   padding: 4rem 8rem;
-  text-align: center;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 footer .footer-container p {
+  color: #FFD687;
   font-family: "Inter", sans-serif;
+}
+footer .footer-container h3 {
+  color: #FFD687;
 }
 footer .footer-container img {
   width: 300px;
