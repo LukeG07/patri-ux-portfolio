@@ -71,7 +71,7 @@ a {
 .from-bottom {
   opacity: 0;
   transform: translateY(40rem);
-  transition: transform 0.3s ease-in, opacity 1s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.5s ease-in;
 }
 
 .from-bottom.appear {
@@ -208,6 +208,9 @@ nav {
 .nav-container-alt .burger-menu .line {
   background-color: #4D6B6B;
 }
+.nav-container-alt .menu {
+  background-color: #ECEEE3;
+}
 
 .hero {
   width: 100%;
@@ -342,7 +345,7 @@ nav {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
   min-height: 400px;
 }
 .cards .card .card-img:hover {

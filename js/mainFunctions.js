@@ -3,7 +3,7 @@ const sliders = document.querySelectorAll(".slide-in")
 
 let observerOptions = {
     root: null,
-    rootMargin: "0px 0px 0px 0px",
+    rootMargin: "-100px 0px",
     threshold: 0
   };
 
@@ -14,7 +14,7 @@ appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
         } else{
           entry.target.classList.add('appear');
           appearOnScroll.unobserve(entry.target);
-          //console.log("in view");
+          console.log("in view");
         }
       });
 }, observerOptions);
