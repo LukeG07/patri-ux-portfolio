@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
 html {
   font-size: 62.5%;
@@ -381,12 +382,19 @@ nav {
 .project-article p {
   text-align: justify;
 }
-.project-article ol {
+.project-article ol, .project-article ul {
   padding-left: 1.5em; /* Adjust the padding as needed */
   list-style-position: inside;
 }
-.project-article ol li {
-  text-align: justify;
+.project-article ol li, .project-article ul li {
+  list-style: none;
+  display: flex;
+}
+.project-article ol li::before, .project-article ul li::before {
+  content: "•";
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
 }
 
 .img-container {

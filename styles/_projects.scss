@@ -82,12 +82,20 @@
     p {
         text-align: justify;
     }
-    ol {
+    ol, ul {
         padding-left: 1.5em; /* Adjust the padding as needed */
         list-style-position: inside;
         li {
-            text-align: justify;
-        }
+            list-style: none;
+            display: flex;
+          }
+          
+          li::before {
+            content: "•";
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+          }
       }
 }
 
