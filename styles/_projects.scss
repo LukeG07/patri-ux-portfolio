@@ -145,6 +145,30 @@
     }
 }
 
+.collage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .row {
+    //flex-basis: calc(100% / 3);
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+  }
+
+  .cell {
+    height: auto;
+    flex: 1;
+  }
+  
+  .row img {
+    width: 100%;
+    height: auto;
+  }
+  
+
 // @media only screen and (max-width: 600px) {
 //     #projects {
 //         align-items: center;

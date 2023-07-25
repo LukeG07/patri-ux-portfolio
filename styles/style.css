@@ -40,7 +40,7 @@ h3 {
 
 h4 {
   font-size: 3rem;
-  font-family: Avenir;
+  font-family: Della Respira;
   font-weight: 500;
   font-style: normal;
 }
@@ -241,7 +241,6 @@ nav {
   width: 40%;
 }
 .hero .hero-container .text-overlay p {
-  font-family: Didot;
   font-weight: 700;
   font-size: 3rem;
 }
@@ -439,6 +438,28 @@ nav {
 }
 .contribution-container .contribution-item {
   flex: 1;
+}
+
+.collage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cell {
+  height: auto;
+  flex: 1;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 480px) {
