@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/mainFunctions.js"></script>
     <title>Patricia Santaengracia - til</title>
 </head>
 <body>
     <main>
-        <div class="nav-container">
+        <div class="nav-container-alt">
             <nav>
               <div id="logo">
                 <a href="../index.html"><p><span>PATRICIA</span> SANTAENGRACIA</p></a>
@@ -47,6 +50,32 @@
                   </div>
                 </div>
                 <div class="row">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="../img/illustrations/image_10_1.png" alt="illustration">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../img/illustrations/image_10_2.png" alt="illustration">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../img/illustrations/image_10_3.png" alt="illustration">
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-black"></div>
+                    <div class="swiper-button-prev swiper-button-black"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+                  <script>
+                    var swiper = new Swiper(".mySwiper", {
+                      navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                      },
+                    });
+                  </script>
+              </div>
+                <div class="row">
                   <div class="cell">
                     <img src="../img/illustrations/image_2.png" alt="Image 2">
                   </div>
@@ -81,17 +110,6 @@
                   </div>
                   <div class="cell">
                     <img src="../img/illustrations/image_9.png" alt="Image 3">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="cell">
-                    <img src="../img/illustrations/image_10_1.png" alt="Image 3">
-                  </div>
-                  <div class="cell">
-                    <img src="../img/illustrations/image_10_2.png" alt="Image 3">
-                  </div>
-                  <div class="cell">
-                    <img src="../img/illustrations/image_10_3.png" alt="Image 3">
                   </div>
                 </div>
               </div>

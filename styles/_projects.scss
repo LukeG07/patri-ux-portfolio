@@ -1,20 +1,30 @@
 /* Project home showcase */
 #projects-showcase {
-    //background: #ECEEE3;
+    //background: #F7F8F2;
     padding: 10vh 0;
     .projects {
         display: flex;
         flex-direction: column;
-        background-color: #ECEEE3;
+        background-color: #F7F8F2;
         scroll-snap-align: start;
         padding: 6rem 0;
         .project-header {
             width: 100%;
             padding: 3rem 6rem;
             h3 {
-                font-family: 'GFS Didot', serif;
-                font-weight: 700;
                 color: #4D6B59;
+            }
+            hr {
+                background-color: #4D6B6B;
+                border-width:0;
+                height:0.1rem;
+                margin-top: 1rem;
+            }
+            hr:first-of-type {
+                transform: translateX(5%);
+            }
+            hr:nth-of-type(2) {
+                transform: translateX(10%);
             }
         }
     }
@@ -70,7 +80,7 @@
 
 /* Project pages */
 .project-article {
-    background-color: #ECEEE3;
+    background-color: #F7F8F2;
     display: flex;
     align-items: left;
     flex-direction: column;
@@ -135,6 +145,12 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 4rem;
+    hr {
+        background-color: #4D6B6B;
+        border-width:0;
+        height:0.1rem;
+        transform: translateX(-80%);
+    }
 }
 
 .contribution-container {
@@ -149,34 +165,47 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 2rem;
   }
-  
+
   .row {
-    //flex-basis: calc(100% / 3);
     display: flex;
     justify-content: space-between;
-    width: 100%
+    width: 100%;
+    gap: 2rem;
   }
 
   .cell {
-    height: auto;
-    flex: 1;
+    height: 100%;
+    img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      
   }
-  
-  .row img {
-    width: 100%;
-    height: auto;
-  }
-  
-
-// @media only screen and (max-width: 600px) {
-//     #projects {
-//         align-items: center;
-//     }
-// }
 
 @media (max-width: 480px) {
     .cards {
         flex-direction: column;
     }
 }
+
+.swiper {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    height: 100%;
+  }
+
+  :root {
+    --swiper-theme-color: #4D6B6B;
+    }

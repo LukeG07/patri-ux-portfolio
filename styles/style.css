@@ -13,8 +13,8 @@ html {
 
 body {
   background-color: #4D6B6B;
-  font-family: "Franklin Gothic Medium";
   overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h2 {
 
 h3 {
   font-size: 3.5rem;
-  font-family: Avenir;
+  font-family: Della Respira;
   font-weight: 500;
   font-style: normal;
 }
@@ -133,7 +133,7 @@ a {
   top: 0;
   z-index: 2;
   align-items: center;
-  background-color: #4D6B6B;
+  transition: background-color 0.3s ease;
 }
 .nav-container a, .nav-container-alt a {
   color: #F6C463;
@@ -160,6 +160,10 @@ a {
 }
 .nav-container #logo p span, .nav-container-alt #logo p span {
   font-weight: 700;
+}
+
+.scroll {
+  background-color: #4D6B6B; /* Set the desired background color */
 }
 
 nav {
@@ -194,7 +198,7 @@ nav {
 }
 
 .nav-container-alt {
-  background-color: #ECEEE3;
+  background-color: #F7F8F2;
 }
 .nav-container-alt #logo p {
   color: #4D6B6B;
@@ -210,7 +214,7 @@ nav {
   background-color: #4D6B6B;
 }
 .nav-container-alt .menu {
-  background-color: #ECEEE3;
+  background-color: #F7F8F2;
 }
 
 .hero {
@@ -222,27 +226,36 @@ nav {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
+  min-height: 90vh;
   padding-right: 5%;
 }
-.hero .hero-container img {
-  width: 60%;
-  transform: scaleX(-1);
+.hero .hero-container .hero-image {
+  width: 70%;
+  z-index: -1;
+}
+.hero .hero-container .hero-image img {
+  width: 95%;
+  position: absolute;
+  top: -18%;
+  transform: translateX(-20rem);
 }
 .hero .hero-container .text-overlay {
-  position: absolute;
-  top: 80%;
-  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   color: #F6C463;
-  padding: 20px;
-  text-align: left;
-  transform: translate(0%, -50%);
-  width: 40%;
+  margin: auto 0 15vh 5rem;
+  width: 60%;
+  padding: 0 0 4rem 4rem;
+  border-left: 0.1rem solid #F6C463;
+  border-bottom: 0.1rem solid #F6C463;
+  height: 250px;
 }
-.hero .hero-container .text-overlay p {
-  font-weight: 700;
-  font-size: 3rem;
+.hero .hero-container .text-overlay h4 {
+  margin-top: auto;
+  font-size: 3.5rem;
 }
 
 /* Media queries */
@@ -308,7 +321,7 @@ nav {
 #projects-showcase .projects {
   display: flex;
   flex-direction: column;
-  background-color: #ECEEE3;
+  background-color: #F7F8F2;
   scroll-snap-align: start;
   padding: 6rem 0;
 }
@@ -317,9 +330,19 @@ nav {
   padding: 3rem 6rem;
 }
 #projects-showcase .projects .project-header h3 {
-  font-family: "GFS Didot", serif;
-  font-weight: 700;
   color: #4D6B59;
+}
+#projects-showcase .projects .project-header hr {
+  background-color: #4D6B6B;
+  border-width: 0;
+  height: 0.1rem;
+  margin-top: 1rem;
+}
+#projects-showcase .projects .project-header hr:first-of-type {
+  transform: translateX(5%);
+}
+#projects-showcase .projects .project-header hr:nth-of-type(2) {
+  transform: translateX(10%);
 }
 
 .cards {
@@ -368,7 +391,7 @@ nav {
 
 /* Project pages */
 .project-article {
-  background-color: #ECEEE3;
+  background-color: #F7F8F2;
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -431,6 +454,12 @@ nav {
   flex-direction: column;
   padding-bottom: 4rem;
 }
+.project-title hr {
+  background-color: #4D6B6B;
+  border-width: 0;
+  height: 0.1rem;
+  transform: translateX(-80%);
+}
 
 .contribution-container {
   display: flex;
@@ -444,22 +473,24 @@ nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 2rem;
 }
 
 .cell {
-  height: auto;
-  flex: 1;
+  height: 100%;
 }
-
-.row img {
-  width: 100%;
-  height: auto;
+.cell img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 480px) {
@@ -467,6 +498,25 @@ nav {
     flex-direction: column;
   }
 }
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  height: 100%;
+}
+
+:root {
+  --swiper-theme-color: #4D6B6B;
+}
+
 .portrait-container {
   display: flex;
   flex-direction: row;
@@ -485,6 +535,11 @@ nav {
 .portrait img {
   min-width: 0;
   width: 100%;
+}
+
+.about-intro {
+  font-family: Avenir;
+  font-weight: 900;
 }
 
 #contact {

@@ -26,3 +26,15 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 })
+
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.nav-container');
+  var scrollPosition = window.scrollY;
+  var windowHeight = window.innerHeight;
+
+  if (scrollPosition > windowHeight) {
+    navbar.classList.add('scroll');
+  } else {
+    navbar.classList.remove('scroll');
+  }
+});
