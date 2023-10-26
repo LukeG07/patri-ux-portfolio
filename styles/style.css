@@ -464,6 +464,7 @@ nav {
 .contribution-container {
   display: flex;
   flex-direction: row;
+  gap: 4rem;
 }
 .contribution-container .contribution-item {
   flex: 1;
