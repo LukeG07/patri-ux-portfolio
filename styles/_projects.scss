@@ -195,18 +195,44 @@
 .swiper {
     width: 100%;
     height: 500px;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     height: 100%;
-  }
+}
 
-  :root {
+:root {
     --swiper-theme-color: #4D6B6B;
+}
+
+.persona-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid #4D6B59;
+    padding: 2rem;
+    background-color: #FAF8F1;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+}
+
+.proto-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    .proto-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex: 1;    }
+    img {
+        flex: 1;    
+        min-width: 0;
     }
+}

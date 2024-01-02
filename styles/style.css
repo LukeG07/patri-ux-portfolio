@@ -33,14 +33,21 @@ h2 {
 
 h3 {
   font-size: 3.5rem;
-  font-family: Della Respira;
+  font-family: Avenir;
   font-weight: 500;
   font-style: normal;
 }
 
 h4 {
   font-size: 3rem;
-  font-family: Della Respira;
+  font-family: Avenir;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 2.5rem;
+  font-family: Avenir;
   font-weight: 500;
   font-style: normal;
 }
@@ -516,6 +523,33 @@ nav {
 
 :root {
   --swiper-theme-color: #4D6B6B;
+}
+
+.persona-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #4D6B59;
+  padding: 2rem;
+  background-color: #FAF8F1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.proto-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+.proto-container .proto-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+.proto-container img {
+  flex: 1;
+  min-width: 0;
 }
 
 .portrait-container {
