@@ -48,15 +48,16 @@
                 background-color: #FFE3C8;
                 margin: 0 0.5rem;
             }
-            .dot {
-                width: 1rem;
-                height: 1rem;
-                background-color: #FFE3C8;
-                border-radius: 50%;
-                margin: 0 0.5rem;
-            }
         }
     }
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #FFE3C8;
+    border-radius: 50%;
+    margin: 0 0.5rem;
 }
 
 .scroll {
@@ -154,7 +155,7 @@ nav {
             flex-direction: column;
             justify-content: flex-end;
             color: #FFE3C8;
-            margin: auto 0 15vh 8rem;
+            margin: auto 0 15vh 0;
             padding: 0 0 4rem 4rem;
             height: 350px;
             z-index: 2;
