@@ -1,6 +1,5 @@
 /* Project home showcase */
 #projects-showcase {
-    padding: 0 2rem 0 1rem;
     .projects {
         display: flex;
         flex-direction: column;
@@ -32,6 +31,7 @@
 .project-showcase-section {
     display: flex;
     flex-direction: row;
+    padding: 0 2rem 0 1rem;
 }
 
 .project-showcase-section-title {
@@ -80,7 +80,7 @@
     flex-direction: row;
     justify-content: flex-end;
     flex-grow: 1;
-    height: 830px;
+    height: 45rem;
     .last {
         padding-bottom: 5rem;
     }
@@ -121,13 +121,13 @@
     a {
         display: flex;
         height: 100%;
-        width: 100%;
         padding-left: 1.5rem;
         background: #A5E1FB;
         box-shadow: -2.964px 3.951px 17.386px 0px rgba(45, 68, 54, 0.25);
         img {
-            display: inline;
-            width: 100%;
+            display: block;
+            height: 100%;
+            flex-shrink: 1;
         }
     }
 }
@@ -136,6 +136,7 @@
     display: flex;
     flex-direction: column;
     background-color: #477979;
+    padding: 0 0 0 1rem;
     hr {
         transform: translateX(-4rem);
         border-color: #FFE3C8;
@@ -210,7 +211,7 @@
 
 .hobby-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: #466767;
 }
 
@@ -221,13 +222,13 @@
 }
 
 .gutter {
-    width: 6rem;
+    width: 7rem;
     border-right: 1px solid #587776;
 }
 
 .column {
     .top-row {
-        height: 6.25rem;
+        height: 12.5rem;
     }
     .btm-row {
         height: 4rem;
@@ -235,15 +236,15 @@
     }
     .circle-container {
         position: relative;
-        height: 6.25rem;
-        width: 10rem;
+        height: 12.5rem;
+        width: 12.5rem;
         overflow: hidden;
         .circle {
             position: absolute;
-            bottom: -6.25rem;
-            left: -6.25rem;
-            width: 12.5rem;
-            height: 12.5rem;
+            bottom: -12.5rem;
+            left: -12.5rem;
+            width: 25rem;
+            height: 25rem;
             border-radius: 100%;
             border: 1px solid #A0B2AF;
         }
@@ -258,11 +259,26 @@
         display: flex;
         align-items: center;
         height: 100%;
+        width: 14rem;
         .title {
             font-family: Italiana;
             font-size: 4rem;
             font-weight: 400;
-            transform: translateY(1.1125rem);
+            transform: translateY(4.25rem);
+        }
+    }
+    .title-beak-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
+        position: relative;
+        .line {
+            position: absolute;
+            border-left: 1px solid #466868;
+            height: 200%;
+            top: 2rem;
         }
     }
 }
@@ -271,18 +287,6 @@
     flex-grow: 1;
 }
 
-// .gutter {
-//     width: 6rem;
-//     border-right: 1px solid #587776;
-//     .top-row {
-//         height: 6.25rem;
-//     }
-//     .btm-row {
-//         height: 4rem;
-//         border-top: 1px solid #587776;
-//     }
-// }
-
 .hobby-header-item {
     width: 20rem;
 }
@@ -290,6 +294,46 @@
 .hobby-header-left-content {
     border-bottom: 1px solid #477979;
 }
+
+.hobby-section-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.hobby-cover {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .hobby-cover-img-container {
+        padding-bottom: 1rem;
+        box-shadow: 0px 4px 18px 0px #00000040;
+        margin-bottom: 2rem;
+    }
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.hobby-cover-title {
+    display: flex;
+    align-items: center;
+    .title-wrapper {
+        width: 100%;
+        color: #466767;
+    }
+    h3 {
+        text-align: center;
+        flex-grow: 1;
+        font-family: Alegreya Sans;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+
 
 .cards {
     width: 100%;
