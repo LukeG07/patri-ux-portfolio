@@ -130,15 +130,10 @@ nav {
 .hero {
     width: 100%;
     padding: 2% 5% 0 5%;
-    //min-height: 100vh;
     .hero-container {
         position: relative;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
         min-height: 90vh;
-        padding-right: 5%;
         .hero-image {
             width: 70%;
             position: absolute;
@@ -159,6 +154,7 @@ nav {
             padding: 0 0 4rem 4rem;
             height: 350px;
             z-index: 2;
+            max-height: 100%;
             h2 {
                 text-shadow: 5px 4px 30px rgba(222, 171, 72, 0.20), 0px 4px 4px rgba(0, 0, 0, 0.25);
                 font-family: Italiana;
@@ -195,32 +191,32 @@ nav {
 
 /* Media queries */
 @media (max-width: 768px) {
-    .hero {
-        .hero-container  {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding-right: 5%;
-            .text-overlay {
-                position: relative;
-                top: 0%;
-                left: 0%;
-                // color: #F6C463;
-                padding: 0px;
-                // text-align: left;
-                transform: translate(-0%, -0%);
-                width: 80%;
-            }
-            img {
-                width: 100%;
-                transform: scaleX(-1);
-            }
-            /* CSS rules for screens smaller than or equal to 768px */
-        }
-    }
+    //.hero {
+    //    .hero-container  {
+    //        position: relative;
+    //        display: flex;
+    //        flex-direction: column;
+    //        justify-content: center;
+    //        align-items: center;
+    //        width: 100%;
+    //        padding-right: 5%;
+    //        .text-overlay {
+    //            position: relative;
+    //            top: 0%;
+    //            left: 0%;
+    //            // color: #F6C463;
+    //            padding: 0px;
+    //            // text-align: left;
+    //            transform: translate(-0%, -0%);
+    //            width: 80%;
+    //        }
+    //        img {
+    //            width: 100%;
+    //            transform: scaleX(-1);
+    //        }
+    //        /* CSS rules for screens smaller than or equal to 768px */
+    //    }
+    //}
 
     .burger-menu {
         display: block;

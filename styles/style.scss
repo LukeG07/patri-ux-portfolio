@@ -1,3 +1,4 @@
+@use "sass:meta";
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -122,11 +123,11 @@ a{
     }
 }
 
-@import "home";
-@import "projects";
-@import "about";
-@import "contact";
-@import "footer";
+@include meta.load-css("home");
+@include meta.load-css("projects");
+@include meta.load-css("about");
+@include meta.load-css("contact");
+@include meta.load-css("footer");
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
