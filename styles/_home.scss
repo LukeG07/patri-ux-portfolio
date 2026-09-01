@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 #home{
     &::before {
         height: 0;
@@ -130,15 +132,10 @@ nav {
 .hero {
     width: 100%;
     padding: 2% 5% 0 5%;
-    //min-height: 100vh;
     .hero-container {
         position: relative;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
         min-height: 90vh;
-        padding-right: 5%;
         .hero-image {
             width: 70%;
             position: absolute;
@@ -159,6 +156,7 @@ nav {
             padding: 0 0 4rem 4rem;
             height: 350px;
             z-index: 2;
+            max-height: 100%;
             h2 {
                 text-shadow: 5px 4px 30px rgba(222, 171, 72, 0.20), 0px 4px 4px rgba(0, 0, 0, 0.25);
                 font-family: Italiana;
@@ -187,38 +185,37 @@ nav {
     }
 }
 
-// @media only screen and (max-width: 600px) {
-//     h1 {
-//         font-size: 4rem;
-//     }
-// }
-
 /* Media queries */
-@media (max-width: 768px) {
+@include v.tablet {
     .hero {
-        .hero-container  {
-            position: relative;
-            display: flex;
+        .hero-container {
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding-right: 5%;
-            .text-overlay {
-                position: relative;
-                top: 0%;
-                left: 0%;
-                // color: #F6C463;
-                padding: 0px;
-                // text-align: left;
-                transform: translate(-0%, -0%);
-                width: 80%;
-            }
-            img {
+            min-height: auto;
+            .hero-image {
+                position: static;
                 width: 100%;
-                transform: scaleX(-1);
+                transform: none;
+                top: auto;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
-            /* CSS rules for screens smaller than or equal to 768px */
+            .text-overlay {
+                height: auto;
+                margin: 0 0 2rem 0;
+                padding: 2rem 0;
+                margin-top: -2rem;
+                h2 {
+                    font-size: 3rem;
+                }
+                hr {
+                    transform: none;
+                }
+                .hero-description {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -262,14 +259,3 @@ nav {
     }
 }
 
-// @media (max-width: 480px) {
-//     .hero-container  {
-//         position: relative;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: flex-end;
-//         width: 100%;
-//         padding-right: 5%;
-//         /* CSS rules for screens smaller than or equal to 480px */
-//     }
-// }

@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .footer-container-v2 {
     display: flex;
     flex-direction: row;
@@ -37,56 +39,8 @@
 }
 
 
-footer {
-    //background: #4D6B6B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        border: #FFD687 1px solid;
-        width: 40%;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 0;
-        position: relative;
-        p {
-            color: #FFD687;
-        }
-        h3 {
-            color: #FFD687;
-        }
-        .footer-img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            img {
-                width: 200px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                transform: translate(40%, -40%) rotate(45deg);
-            }
-        }
-    }
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-    footer {
-        .footer-container {
-            padding: 0rem 0rem; /* Adjust padding for smaller screens */
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    footer {
-        .footer-container {
-            padding: 1rem 2rem; /* Adjust padding for even smaller screens */
-        }
+@include v.tablet {
+    .footer-content {
+        width: 90%;
     }
 }
