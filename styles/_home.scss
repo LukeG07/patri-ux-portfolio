@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 #home{
     &::before {
         height: 0;
@@ -183,40 +185,39 @@ nav {
     }
 }
 
-// @media only screen and (max-width: 600px) {
-//     h1 {
-//         font-size: 4rem;
-//     }
-// }
-
 /* Media queries */
-@media (max-width: 768px) {
-    //.hero {
-    //    .hero-container  {
-    //        position: relative;
-    //        display: flex;
-    //        flex-direction: column;
-    //        justify-content: center;
-    //        align-items: center;
-    //        width: 100%;
-    //        padding-right: 5%;
-    //        .text-overlay {
-    //            position: relative;
-    //            top: 0%;
-    //            left: 0%;
-    //            // color: #F6C463;
-    //            padding: 0px;
-    //            // text-align: left;
-    //            transform: translate(-0%, -0%);
-    //            width: 80%;
-    //        }
-    //        img {
-    //            width: 100%;
-    //            transform: scaleX(-1);
-    //        }
-    //        /* CSS rules for screens smaller than or equal to 768px */
-    //    }
-    //}
+@include v.tablet {
+    .hero {
+        .hero-container {
+            flex-direction: column;
+            min-height: auto;
+            .hero-image {
+                position: static;
+                width: 100%;
+                transform: none;
+                top: auto;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .text-overlay {
+                height: auto;
+                margin: 0 0 2rem 0;
+                padding: 2rem 0;
+                margin-top: -2rem;
+                h2 {
+                    font-size: 3rem;
+                }
+                hr {
+                    transform: none;
+                }
+                .hero-description {
+                    width: 100%;
+                }
+            }
+        }
+    }
 
     .burger-menu {
         display: block;
@@ -258,14 +259,3 @@ nav {
     }
 }
 
-// @media (max-width: 480px) {
-//     .hero-container  {
-//         position: relative;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: flex-end;
-//         width: 100%;
-//         padding-right: 5%;
-//         /* CSS rules for screens smaller than or equal to 480px */
-//     }
-// }

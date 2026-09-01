@@ -1,4 +1,5 @@
 @use "sass:meta";
+@use "variables" as v;
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -102,7 +103,7 @@ a{
     transform: translateX(0rem);
 }
 
-@media only screen and (max-width: 768px) {
+@include v.tablet {
     h1 {
         font-size: 4rem;
     }
@@ -110,16 +111,43 @@ a{
         font-size: 3rem;
     }
     h3 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
-    p {
-        font-size: 1rem;
-    }
-    a{
+    h5 {
         font-size: 1.5rem;
+    }
+    p, li {
+        font-size: 1.25rem;
+    }
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+@include v.mobile {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.125rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+    a {
+        font-size: 1.25rem;
     }
 }
 

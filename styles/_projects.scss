@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 /* Project home showcase */
 #projects-showcase {
   display: flex;
@@ -153,15 +155,6 @@
     min-height: 18rem;
 }
 
-@media (max-width: 480px) {
-    .project-showcase-section-title {
-      writing-mode: lr;
-    }
-    .project-gutter-left {
-      max-width: 100%;
-    }
-}
-
 .latest-project-header {
   text-align: right;
   flex-grow: 1;
@@ -173,11 +166,11 @@
   margin-right: 2rem;
   border-bottom: 1px solid #FFE3C8;
 }
-    
+
 .latest-project-content {
   display: flex;
   flex-direction: row;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .latest-project-cover-container {
@@ -379,7 +372,7 @@
             }
         }
     }
-    
+
 }
 
 
@@ -404,7 +397,7 @@
             list-style: none;
             display: flex;
           }
-          
+
           li::before {
             content: "•";
             display: inline-block;
@@ -418,6 +411,11 @@
     width: 90%;
     margin: 0 auto;
     padding: 3rem 0;
+}
+
+.tall-image {
+    height: 1000px;
+    width: auto;
 }
 
 .no-btm-padding {
@@ -489,14 +487,8 @@
         height: 100%;
         object-fit: contain;
       }
-      
-  }
 
-@media (max-width: 480px) {
-    .cards {
-        flex-direction: column;
-    }
-}
+  }
 
 .swiper {
     width: 100%;
@@ -536,10 +528,144 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        flex: 1;    
+        flex: 1;
     }
     img {
-        flex: 1;    
+        flex: 1;
         min-width: 0;
+    }
+}
+
+/* Media queries — placed last so equal-specificity overrides win the cascade */
+@include v.tablet {
+    .project-showcase-section {
+      flex-direction: column;
+    }
+
+    .project-showcase-section-title {
+      writing-mode: lr;
+      padding-top: 0;
+      h3 {
+        font-size: 2rem;
+      }
+    }
+    .project-gutter-left {
+      max-width: 100%;
+    }
+
+    .project-row {
+      flex-direction: column;
+      margin-right: 0;
+    }
+
+    .project-showcase-section-content-item {
+      flex-direction: column-reverse;
+      .project-col-1 {
+        border-bottom: none;
+        border-top: 1px solid #466767;
+      }
+    }
+
+    .project-intro-index h4 {
+      font-size: 3rem;
+    }
+
+    .project-intro-text {
+      max-width: 100%;
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      a {
+        font-size: 1.25rem;
+      }
+    }
+
+    .latest-project-header {
+      font-size: 2rem;
+    }
+
+    .hobby-cover-title h3 {
+      font-size: 1.5rem;
+    }
+
+    .project-col-1 {
+      flex: 1 1 auto;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #466767;
+    }
+
+    .project-col-2 {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+
+    .project-cover {
+      min-width: 0;
+    }
+
+    .latest-project-cover-container img {
+      max-width: 100%;
+    }
+
+    .latest-project-section {
+      height: auto;
+    }
+
+    .decorative-row {
+      display: none;
+    }
+
+    .hobby-section-content {
+      flex-direction: column;
+    }
+
+    .hobby-header {
+      display: none;
+    }
+
+    .bi-image {
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+    }
+
+    .contribution-container {
+      flex-direction: column;
+    }
+
+    .proto-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .collage .row {
+      flex-wrap: wrap;
+    }
+
+    .swiper {
+      height: 320px;
+    }
+
+    .project-article {
+      padding: 4rem 6%;
+    }
+
+    .tall-image {
+      height: auto;
+      width: 90%;
+    }
+}
+
+@include v.mobile {
+    .cards {
+        flex-direction: column;
+    }
+    .project-article {
+        padding: 3rem 5%;
     }
 }
