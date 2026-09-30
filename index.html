@@ -19,30 +19,19 @@
       <section id="home">
         <div class="nav-container">
           <nav>
-            <div id="logo">
-              <a href="#top"
-                ><p><span>PATRICIA</span> SANTAENGRACIA</p></a
-              >
-              <div id="symbol-container">
-                <div class="line"></div>
-                <div class="dot"></div>
-              </div>
-            </div>
-            <div class="burger-menu">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-            <ul class="menu">
-              <li class="menu-item">
-                <a href="#projects-showcase">Work</a>
-              </li>
-              <li class="menu-item">
-                <a href="./html/about.html">About Me</a>
-              </li>
-              <li class="menu-item">
-                <a href="#footer">Contact</a>
-              </li>
+            <a id="logo" href="#top" aria-label="Patri Santaengracia, home">
+              <span class="logo-name">Patri Santaengracia</span>
+              <span class="logo-symbol" aria-hidden="true"><span class="line"></span><span class="ring"></span></span>
+            </a>
+            <button class="burger-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+            <ul class="menu" id="site-menu">
+              <li class="menu-item"><a href="#projects-showcase">Work</a></li>
+              <li class="menu-item"><a href="./html/about.html">About me</a></li>
+              <li class="menu-item"><a href="#footer">Contact</a></li>
             </ul>
           </nav>
           <script src="./scripts/script.js"></script>

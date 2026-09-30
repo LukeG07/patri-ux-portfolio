@@ -27,14 +27,14 @@ sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 })
 
-window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.nav-container');
-  var scrollPosition = window.scrollY;
-  var windowHeight = window.innerHeight;
+const navbar = document.querySelector('.nav-container');
+const hero = document.querySelector('#home');
 
-  if (scrollPosition > windowHeight) {
-    navbar.classList.add('scroll');
-  } else {
-    navbar.classList.remove('scroll');
-  }
-});
+function updateNavbar() {
+  if (!navbar || !hero) return;
+  const pastHero = hero.getBoundingClientRect().bottom <= navbar.offsetHeight;
+  navbar.classList.toggle('scroll', pastHero);
+}
+
+window.addEventListener('scroll', updateNavbar, { passive: true });
+updateNavbar();
