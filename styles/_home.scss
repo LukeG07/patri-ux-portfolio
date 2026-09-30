@@ -174,13 +174,27 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 #home {
     background-color: v.$green;
     background-image:
-        $hero-waves,
         radial-gradient(ellipse 60% 55% at 50% 0%, rgba(255, 255, 255, 0.12), transparent 70%),
         linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.08) 100%);
-    background-size: 80px 24px, auto, auto;
     color: v.$white;
     position: relative;
     overflow: clip;
+
+    // wave texture on its own layer, drifting sideways; one tile wider than
+    // the hero so shifting by exactly one tile loops seamlessly
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -80px;
+        right: 0;
+        background-image: $hero-waves;
+        background-size: 80px 24px;
+        animation: hero-waves 5s linear infinite;
+        will-change: transform;
+        pointer-events: none;
+    }
 
     // decorative vertical line, continued in the work section
     &::after {
@@ -262,8 +276,14 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     50% { transform: translate(-50%, 6px); }
 }
 
+@keyframes hero-waves {
+    from { transform: translateX(0); }
+    to { transform: translateX(80px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .hero__scroll {
+    .hero__scroll,
+    #home::before {
         animation: none;
     }
 }
