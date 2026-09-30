@@ -123,13 +123,6 @@ nav {
     }
 }
 
-.dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: #FFE3C8;
-    border-radius: 50%;
-}
-
 @include v.tablet {
     #logo .logo-symbol {
         display: none;

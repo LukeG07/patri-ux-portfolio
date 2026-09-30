@@ -68,18 +68,31 @@ In your browser's dev tools, toggle the device toolbar (`Cmd+Shift+M` in Chrome)
 - **768px** — tablet
 - **1024px+** — desktop
 
+## Adding work to the home page
+
+Each project in "Latest work" (`index.html`) is a `.work-card`. Variants are modifier classes: `work-card--outlined`, `work-card--featured` (green band, pair with `btn--light`) and `work-card--reverse` (image on the left). To replace a grey placeholder with a real image, put an `<img>` inside the media box:
+
+```html
+<div class="work-card__media reveal">
+  <img src="./img/shelter/cover.png" alt="Shelter Scotland campaigns page" />
+</div>
+```
+
+Images are cropped to 545×384 (≈1.42:1) on desktop and 2:1 on mobile.
+
 ## Project structure
 
 ```
 index.html              Home page
 html/                    All other pages (about, case studies, illustrations, photography)
 styles/
-  style.scss             Entry point — resets, global type scale, loads partials
-  _variables.scss         Shared breakpoints ($bp-tablet, $bp-mobile) and mixins
-  _home.scss              Nav, hamburger menu, hero
-  _projects.scss          Home project showcase + shared case-study layout classes
+  style.scss             Entry point — resets, global type scale, font imports, loads partials
+  _variables.scss         Design tokens (colours, fonts, radii, layout widths), breakpoints and mixins
+  _components.scss        Buttons (.btn--dark/--light/--outline) and the .reveal scroll animation
+  _home.scss              Nav + hamburger menu (every page), home hero
+  _cards.scss             Home "Latest work" section and the .work-card component
+  _projects.scss          Shared case-study page layout classes
   _about.scss             About page
-  _contact.scss           Contact section
   _footer.scss            Footer (used on every page)
   style.css / .css.map    Compiled output — do not edit directly, edit the .scss instead
 js/mainFunctions.js       Scroll-reveal animations, navbar scroll color

@@ -156,10 +156,9 @@ a{
 @include meta.load-css("cards");
 @include meta.load-css("projects");
 @include meta.load-css("about");
-@include meta.load-css("contact");
 @include meta.load-css("footer");
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Della+Respira&family=Italiana&display=swap');
+// Della Respira + Alegreya Sans: legacy type on the case-study pages
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Della+Respira&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Montserrat:wght@300;400;500;700&display=swap');
