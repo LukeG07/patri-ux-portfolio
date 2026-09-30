@@ -589,7 +589,10 @@ nav {
   column-gap: 3.75rem;
   align-items: center;
   padding: 20px 20px 20px 30px;
+  border: 1px solid transparent;
+  border-radius: 30px;
   color: #12123a;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .work-card + .work-card {
@@ -622,6 +625,9 @@ nav {
   overflow: hidden;
   border-radius: 20px;
   background-color: #d9d9d9;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .work-card__media img {
@@ -631,17 +637,36 @@ nav {
   object-fit: cover;
 }
 
-.work-card--outlined {
-  border: 1px solid #1e211c;
-  border-radius: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+.work-card__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
 }
 
-.work-card--outlined .work-card__media {
-  border: 1px solid #1e211c;
+.work-card__cta:hover {
+  transform: none;
 }
 
+@media (hover: hover) and (min-width: 769px) {
+  .work-card:not(.work-card--featured):is(:hover, :has(:focus-visible)) {
+    border-color: #1e211c;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+  .work-card:not(.work-card--featured):is(:hover, :has(:focus-visible)) .work-card__media {
+    outline-color: #1e211c;
+  }
+  .work-card--featured:is(:hover, :has(:focus-visible)) .work-card__media {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-card--featured .work-card__media {
+    transform: none !important;
+  }
+}
 .work-card--reverse {
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   padding: 20px 20px 20px 30px;
@@ -726,7 +751,6 @@ nav {
   }
   .work-card,
   .work-card--reverse,
-  .work-card--outlined,
   .work-card--featured {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.25rem;
@@ -740,25 +764,21 @@ nav {
   }
   .work-card::before,
   .work-card--reverse::before,
-  .work-card--outlined::before,
   .work-card--featured::before {
     content: none;
   }
   .work-card + .work-card,
   .work-card--reverse + .work-card,
-  .work-card--outlined + .work-card,
   .work-card--featured + .work-card {
     margin-top: 3.25rem;
   }
   .work-card .work-card__text,
   .work-card--reverse .work-card__text,
-  .work-card--outlined .work-card__text,
   .work-card--featured .work-card__text {
     padding: 0 0.75rem;
   }
   .work-card .work-card__media,
   .work-card--reverse .work-card__media,
-  .work-card--outlined .work-card__media,
   .work-card--featured .work-card__media {
     order: -1;
     aspect-ratio: 2/1;
@@ -768,7 +788,6 @@ nav {
   }
   .work-card .btn--light,
   .work-card--reverse .btn--light,
-  .work-card--outlined .btn--light,
   .work-card--featured .btn--light {
     background-color: #1e211c;
     color: #ffffff;

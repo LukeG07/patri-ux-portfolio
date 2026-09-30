@@ -70,7 +70,7 @@ In your browser's dev tools, toggle the device toolbar (`Cmd+Shift+M` in Chrome)
 
 ## Adding work to the home page
 
-Each project in "Latest work" (`index.html`) is a `.work-card`. Variants are modifier classes: `work-card--outlined`, `work-card--featured` (green band, pair with `btn--light`) and `work-card--reverse` (image on the left). To replace a grey placeholder with a real image, put an `<img>` inside the media box:
+Each project in "Latest work" (`index.html`) is a `.work-card`. Variants are modifier classes: `work-card--featured` (green band, pair with `btn--light`) and `work-card--reverse` (image on the left). The white card with border and shadow is the hover state. The button's `work-card__cta` class stretches its link over the whole card, so point that `href` at the case study. To replace a grey placeholder with a real image, put an `<img>` inside the media box:
 
 ```html
 <div class="work-card__media reveal">

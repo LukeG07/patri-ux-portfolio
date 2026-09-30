@@ -48,7 +48,8 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
 }
 
 // ---------- Work card ----------
-// Variants: --outlined, --featured (green band), --reverse (media on the left)
+// Variants: --featured (green band), --reverse (media on the left).
+// The white/bordered look is the hover state; the whole card links via .work-card__cta.
 
 .work-card {
     position: relative;
@@ -58,7 +59,10 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
     column-gap: 3.75rem;
     align-items: center;
     padding: $card-pad-y $card-pad-y $card-pad-y $card-pad-x;
+    border: 1px solid transparent; // coloured on hover, so no layout shift
+    border-radius: 30px;
     color: v.$navy;
+    transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
     & + & {
         margin-top: 2.5rem;
@@ -90,6 +94,10 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
     overflow: hidden;
     border-radius: 20px;
     background-color: v.$placeholder;
+    // outline (not border) so the hover frame doesn't change the image size
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    transition: outline-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     img {
         display: block;
         width: 100%;
@@ -98,13 +106,39 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
     }
 }
 
-.work-card--outlined {
-    border: 1px solid v.$ink;
-    border-radius: 30px;
-    background-color: v.$white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-    .work-card__media {
-        border: 1px solid v.$ink;
+.work-card__cta {
+    // stretch the button's hit area over the whole card
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+    }
+    // a transform would make the button the ::after's containing block
+    &:hover {
+        transform: none;
+    }
+}
+
+@media (hover: hover) and (min-width: #{v.$bp-tablet + 1}) {
+    .work-card:not(.work-card--featured):is(:hover, :has(:focus-visible)) {
+        border-color: v.$ink;
+        background-color: v.$white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        .work-card__media {
+            outline-color: v.$ink;
+        }
+    }
+
+    .work-card--featured:is(:hover, :has(:focus-visible)) .work-card__media {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-card--featured .work-card__media {
+        transform: none !important;
     }
 }
 
@@ -196,7 +230,6 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
 
     .work-card,
     .work-card--reverse,
-    .work-card--outlined,
     .work-card--featured {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 1.25rem;
