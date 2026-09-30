@@ -161,11 +161,11 @@ a {
 }
 .btn {
   display: inline-block;
-  padding: 0.875rem 1.5rem;
+  padding: 1rem 2.25rem;
   border: 1px solid transparent;
   border-radius: 6px;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -456,6 +456,208 @@ nav {
   }
   .hero__scroll {
     bottom: 1.25rem;
+  }
+}
+.latest-work {
+  container-type: inline-size;
+  padding: 6rem 0 6rem;
+}
+
+.latest-work__inner {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin-bottom: 2.75rem;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1e211c;
+}
+
+.latest-work__more {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.work-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  column-gap: 3.75rem;
+  align-items: center;
+  padding: 20px 20px 20px 30px;
+  color: #12123a;
+}
+
+.work-card + .work-card {
+  margin-top: 2.5rem;
+}
+
+.work-card__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, 2.25vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.work-card__title strong {
+  display: block;
+  font-weight: 700;
+}
+
+.work-card__body {
+  max-width: 26rem;
+  margin: 1.25rem 0 2.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.work-card__media {
+  aspect-ratio: 545/384;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+}
+
+.work-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-card--outlined {
+  border: 1px solid #1e211c;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.work-card--outlined .work-card__media {
+  border: 1px solid #1e211c;
+}
+
+.work-card--reverse {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  padding: 20px 20px 20px 30px;
+}
+
+.work-card--reverse .work-card__media {
+  order: -1;
+}
+
+.work-card--featured {
+  margin-block: 5.5rem 3.5rem;
+  padding-bottom: 0;
+  color: #ffffff;
+}
+
+.work-card--featured::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 52px;
+  left: 50%;
+  width: calc(100cqw - 44px);
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background-color: #4f5e40;
+}
+
+.work-card--featured .work-card__text {
+  padding-bottom: 52px;
+}
+
+.work-card--featured .work-card__media {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.work-card--featured + .work-card {
+  margin-top: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .latest-work {
+    padding: 3rem 0 4rem;
+  }
+  .latest-work__inner {
+    width: calc(100% - 5.25rem);
+  }
+  .section-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #12123a;
+  }
+  .latest-work__more {
+    margin-top: 3.5rem;
+  }
+  .work-card,
+  .work-card--reverse,
+  .work-card--outlined,
+  .work-card--featured {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.25rem;
+    margin-block: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: #12123a;
+  }
+  .work-card::before,
+  .work-card--reverse::before,
+  .work-card--outlined::before,
+  .work-card--featured::before {
+    content: none;
+  }
+  .work-card + .work-card,
+  .work-card--reverse + .work-card,
+  .work-card--outlined + .work-card,
+  .work-card--featured + .work-card {
+    margin-top: 3.25rem;
+  }
+  .work-card .work-card__text,
+  .work-card--reverse .work-card__text,
+  .work-card--outlined .work-card__text,
+  .work-card--featured .work-card__text {
+    padding: 0 0.75rem;
+  }
+  .work-card .work-card__media,
+  .work-card--reverse .work-card__media,
+  .work-card--outlined .work-card__media,
+  .work-card--featured .work-card__media {
+    order: -1;
+    aspect-ratio: 2/1;
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  .work-card .btn--light,
+  .work-card--reverse .btn--light,
+  .work-card--outlined .btn--light,
+  .work-card--featured .btn--light {
+    background-color: #1e211c;
+    color: #ffffff;
+  }
+  .work-card__title {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+  .work-card__title strong {
+    display: inline;
+  }
+  .work-card__body {
+    margin: 0.75rem 0 2rem;
+    font-size: 1.125rem;
   }
 }
 /* Project home showcase */

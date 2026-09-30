@@ -1,0 +1,202 @@
+@use "variables" as v;
+
+// ---------- Latest work section ----------
+
+$work-width: 1170px;
+$card-pad-x: 30px;
+$card-pad-y: 20px;
+$band-overhang: 52px; // how far the featured image hangs below the green band
+
+.latest-work {
+    // lets the featured band size itself to the section (excludes scrollbar)
+    container-type: inline-size;
+    padding: 6rem 0 6rem;
+}
+
+.latest-work__inner {
+    width: 90%;
+    max-width: $work-width;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin-bottom: 2.75rem;
+    font-family: v.$font-display;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: v.$ink;
+}
+
+.latest-work__more {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+// ---------- Work card ----------
+// Variants: --outlined, --featured (green band), --reverse (media on the left)
+
+.work-card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    column-gap: 3.75rem;
+    align-items: center;
+    padding: $card-pad-y $card-pad-y $card-pad-y $card-pad-x;
+    color: v.$navy;
+
+    & + & {
+        margin-top: 2.5rem;
+    }
+}
+
+.work-card__title {
+    font-family: v.$font-body;
+    font-size: clamp(1.5rem, 2.25vw, 2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    strong {
+        display: block;
+        font-weight: 700;
+    }
+}
+
+.work-card__body {
+    max-width: 26rem;
+    margin: 1.25rem 0 2.25rem;
+    font-family: v.$font-body;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.work-card__media {
+    aspect-ratio: 545 / 384;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: v.$placeholder;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.work-card--outlined {
+    border: 1px solid v.$ink;
+    border-radius: 30px;
+    background-color: v.$white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    .work-card__media {
+        border: 1px solid v.$ink;
+    }
+}
+
+.work-card--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    padding: $card-pad-y $card-pad-y $card-pad-y $card-pad-x;
+    .work-card__media {
+        order: -1;
+    }
+}
+
+.work-card--featured {
+    margin-block: 5.5rem 3.5rem;
+    padding-bottom: 0;
+    color: v.$white;
+    // full-bleed green band, inset 22px from the viewport edges
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: $band-overhang;
+        left: 50%;
+        width: calc(100cqw - 44px);
+        transform: translateX(-50%);
+        border-radius: 8px;
+        background-color: v.$green;
+    }
+    .work-card__text {
+        // centre within the band rather than the (taller) card
+        padding-bottom: $band-overhang;
+    }
+    .work-card__media {
+        box-shadow: v.$shadow;
+    }
+    & + .work-card {
+        margin-top: 3.5rem;
+    }
+}
+
+// ---------- Tablet / mobile: everything stacks, media on top ----------
+
+@include v.tablet {
+    .latest-work {
+        padding: 3rem 0 4rem;
+    }
+
+    .latest-work__inner {
+        width: calc(100% - 5.25rem);
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: v.$navy;
+    }
+
+    .latest-work__more {
+        margin-top: 3.5rem;
+    }
+
+    .work-card,
+    .work-card--reverse,
+    .work-card--outlined,
+    .work-card--featured {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 1.25rem;
+        margin-block: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        color: v.$navy;
+        &::before {
+            content: none;
+        }
+        & + .work-card {
+            margin-top: 3.25rem;
+        }
+        .work-card__text {
+            padding: 0 0.75rem;
+        }
+        .work-card__media {
+            order: -1;
+            aspect-ratio: 2 / 1;
+            border: 0;
+            border-radius: v.$radius;
+            box-shadow: v.$shadow;
+        }
+        .btn--light {
+            background-color: v.$ink;
+            color: v.$white;
+        }
+    }
+
+    .work-card__title {
+        font-size: 1.75rem;
+        line-height: 1.35;
+        strong {
+            display: inline;
+        }
+    }
+
+    .work-card__body {
+        margin: 0.75rem 0 2rem;
+        font-size: 1.125rem;
+    }
+}
