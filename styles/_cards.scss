@@ -171,6 +171,8 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
 @include v.tablet {
     .latest-work {
         padding: 3rem 0 4rem;
+        // keep the heading clear of the fixed nav when jumping to #projects-showcase
+        scroll-margin-top: 2.5rem;
         &::before {
             left: calc(2.625rem - #{v.$deco-offset-tablet});
             width: 38px;

@@ -662,6 +662,7 @@ nav {
 @media (max-width: 768px) {
   .latest-work {
     padding: 3rem 0 4rem;
+    scroll-margin-top: 2.5rem;
   }
   .latest-work::before {
     left: calc(2.625rem - 20px);
