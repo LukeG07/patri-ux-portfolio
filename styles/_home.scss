@@ -186,6 +186,19 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
         linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.08) 100%);
     background-size: 80px 24px, auto, auto;
     color: v.$white;
+    position: relative;
+    overflow: clip;
+
+    // decorative vertical line, continued in the work section
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc((100% - min(90%, #{v.$work-width})) / 2 - #{v.$deco-offset});
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .hero {
@@ -209,6 +222,19 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     letter-spacing: 0.01em;
     text-transform: uppercase;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    // underline running in from the left edge of the viewport
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 1rem);
+        left: calc((min(90vw, #{$content-width}) - 100vw) / 2);
+        width: calc((100vw - min(90vw, #{$content-width})) / 2 + 685px);
+        max-width: 100vw;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.45);
+    }
 }
 
 .hero__intro {
@@ -250,6 +276,14 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 }
 
 @include v.tablet {
+    #home::after {
+        left: calc(2.625rem - #{v.$deco-offset-tablet});
+    }
+
+    .hero__title::after {
+        content: none;
+    }
+
     .hero {
         min-height: 0;
         padding: calc(#{$nav-height} + 1.5rem) 0 5rem;

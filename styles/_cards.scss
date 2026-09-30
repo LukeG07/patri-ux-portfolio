@@ -2,7 +2,6 @@
 
 // ---------- Latest work section ----------
 
-$work-width: 1170px;
 $card-pad-x: 30px;
 $card-pad-y: 20px;
 $band-overhang: 52px; // how far the featured image hangs below the green band
@@ -10,12 +9,27 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
 .latest-work {
     // lets the featured band size itself to the section (excludes scrollbar)
     container-type: inline-size;
+    position: relative;
+    overflow: clip; // trims the decorative line at the section's top edge
     padding: 6rem 0 6rem;
+
+    // quarter arc joining the vertical line where the hero ends
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc((100% - min(90%, #{v.$work-width})) / 2 - #{v.$deco-offset});
+        width: 55px;
+        height: 55px;
+        border-right: 1px solid v.$deco-colour;
+        border-bottom: 1px solid v.$deco-colour;
+        border-bottom-right-radius: 100%;
+    }
 }
 
 .latest-work__inner {
     width: 90%;
-    max-width: $work-width;
+    max-width: v.$work-width;
     margin: 0 auto;
 }
 
@@ -126,8 +140,29 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
     .work-card__media {
         box-shadow: v.$shadow;
     }
+    // the decorative vertical line, running up from just above the band
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: calc(100% + 18px);
+        left: -(v.$deco-offset);
+        width: 1px;
+        height: 400vh;
+        background-color: v.$deco-colour;
+    }
     & + .work-card {
         margin-top: 3.5rem;
+        // small ring accent beside the following card
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 40px);
+            left: -58px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid v.$navy;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -136,6 +171,11 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
 @include v.tablet {
     .latest-work {
         padding: 3rem 0 4rem;
+        &::before {
+            left: calc(2.625rem - #{v.$deco-offset-tablet});
+            width: 38px;
+            height: 38px;
+        }
     }
 
     .latest-work__inner {
@@ -185,6 +225,14 @@ $band-overhang: 52px; // how far the featured image hangs below the green band
             background-color: v.$ink;
             color: v.$white;
         }
+    }
+
+    .work-card--featured::after {
+        left: -(v.$deco-offset-tablet);
+    }
+
+    .work-card--featured + .work-card::after {
+        content: none;
     }
 
     .work-card__title {

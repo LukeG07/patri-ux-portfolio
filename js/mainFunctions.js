@@ -1,4 +1,4 @@
-const faders = document.querySelectorAll(".fade-in");
+const faders = document.querySelectorAll(".fade-in, .reveal");
 const sliders = document.querySelectorAll(".slide-in")
 
 let observerOptions = {
@@ -14,7 +14,6 @@ appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
         } else{
           entry.target.classList.add('appear');
           appearOnScroll.unobserve(entry.target);
-          console.log("in view");
         }
       });
 }, observerOptions);
