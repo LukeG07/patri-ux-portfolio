@@ -1,6 +1,25 @@
 $bp-tablet: 768px;
 $bp-mobile: 480px;
 
+// Colours (v3)
+$green: #4f5e40;
+$green-light: #66735a;
+$ink: #1e211c;
+$navy: #12123a;
+$paper: #fafbf6;
+$white: #ffffff;
+$placeholder: #d9d9d9;
+$rule: #b9bcb3;
+
+// Fonts (v3) — guessed from the mockups, swap here if Figma says otherwise
+$font-body: "Montserrat", sans-serif;
+$font-display: "Comfortaa", sans-serif;
+
+// Shape
+$radius: 16px;
+$radius-sm: 6px;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
 @mixin tablet {
     @media (max-width: $bp-tablet) {
         @content;

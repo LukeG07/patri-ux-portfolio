@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+// Buttons
+.btn {
+    display: inline-block;
+    padding: 0.875rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: v.$radius-sm;
+    font-family: v.$font-body;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    box-shadow: v.$shadow;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+    }
+    &:focus-visible {
+        outline: 2px solid v.$green;
+        outline-offset: 3px;
+    }
+}
+
+.btn--dark {
+    background-color: v.$ink;
+    color: v.$white;
+}
+
+.btn--light {
+    background-color: v.$white;
+    color: v.$green;
+}
+
+.btn--outline {
+    background-color: v.$white;
+    border-color: v.$ink;
+    color: v.$green;
+    box-shadow: none;
+}
