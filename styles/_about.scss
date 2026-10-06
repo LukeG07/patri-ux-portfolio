@@ -5,7 +5,6 @@
 // home page line), so they line up with the content at every width.
 
 $ring: 24px;
-$arc: 88px;
 $profile-pad: 88px; // indent of the intro/profile text from the content edge
 $ring-top: 40px; // where the vertical line ends, from the top of the portrait
 
@@ -28,47 +27,6 @@ $ring-top: 40px; // where the vertical line ends, from the top of the portrait
 
 .about__top {
     overflow: clip; // trims the vertical line at the top of the page
-}
-
-.about__header {
-    padding: 5.5rem 0 3.5rem;
-
-    .about__inner {
-        position: relative;
-        padding-left: 60px;
-
-        // ring to the left of the title
-        &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: $ring;
-            height: $ring;
-            margin-top: calc(#{$ring} / -2);
-            border: 2px solid v.$green-light;
-            border-radius: 50%;
-        }
-
-        // rule under the title, from the vertical line out to the right
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -3.5rem;
-            left: -(v.$deco-offset);
-            right: -(v.$deco-offset);
-            height: 1px;
-            background-color: v.$green;
-        }
-    }
-}
-
-.about__title {
-    font-family: v.$font-body;
-    font-size: clamp(2.5rem, 4.5vw, 4rem);
-    font-weight: 300;
-    line-height: 1.2;
-    color: v.$navy;
 }
 
 .about__intro {
@@ -108,22 +66,6 @@ $ring-top: 40px; // where the vertical line ends, from the top of the portrait
         border: 1px solid v.$green;
         border-radius: 50%;
         background-color: v.$paper;
-    }
-}
-
-// Quarter arc where the line meets the rule under the title
-.about__intro {
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        top: -7rem;
-        left: -(v.$deco-offset);
-        width: $arc;
-        height: $arc;
-        border-right: 1px solid v.$green;
-        border-bottom: 1px solid v.$green;
-        border-bottom-right-radius: 100%;
     }
 }
 
@@ -259,32 +201,9 @@ $tl-pad: 76px; // item text, from the content edge
         width: calc(100% - 5.25rem);
     }
 
-    .about__header {
-        padding: 1.25rem 0 1.25rem;
-
-        .about__inner {
-            padding-left: 0;
-            &::before {
-                content: none;
-            }
-            &::after {
-                bottom: -1.25rem;
-                left: -(v.$deco-offset-tablet);
-                right: -2.625rem;
-            }
-        }
-    }
-
-    .about__title {
-        font-weight: 400;
-    }
-
     .about__intro {
         margin-top: 2.5rem;
         padding-left: 0;
-        &::before {
-            content: none;
-        }
     }
 
     .about__profile {

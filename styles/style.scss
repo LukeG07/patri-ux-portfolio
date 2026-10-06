@@ -152,10 +152,12 @@ a{
 }
 
 @include meta.load-css("components");
+@include meta.load-css("page-header");
 @include meta.load-css("home");
 @include meta.load-css("cards");
 @include meta.load-css("projects");
 @include meta.load-css("about");
+@include meta.load-css("more-work");
 @include meta.load-css("footer");
 
 // Fonts

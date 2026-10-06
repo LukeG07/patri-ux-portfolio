@@ -1,0 +1,85 @@
+@use "variables" as v;
+
+// ---------- Page header (About, More work) ----------
+// Title with a ring beside it, a rule underneath running out from the
+// decorative vertical line, and a quarter arc where the two meet.
+// The vertical line itself is drawn by each page, which knows where it ends.
+
+$ring: 24px;
+$arc: 88px;
+
+.page-header {
+    position: relative;
+    width: 90%;
+    max-width: v.$work-width;
+    margin: 0 auto;
+    padding: 5.5rem 0 3.5rem;
+
+    // rule under the title
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -(v.$deco-offset);
+        right: -(v.$deco-offset);
+        height: 1px;
+        background-color: v.$green;
+    }
+
+    // quarter arc joining the vertical line
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: -(v.$deco-offset);
+        width: $arc;
+        height: $arc;
+        border-right: 1px solid v.$green;
+        border-bottom: 1px solid v.$green;
+        border-bottom-right-radius: 100%;
+    }
+}
+
+.page-title {
+    position: relative;
+    padding-left: 60px;
+    font-family: v.$font-body;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: v.$navy;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: $ring;
+        height: $ring;
+        margin-top: calc(#{$ring} / -2);
+        border: 2px solid v.$green-light;
+        border-radius: 50%;
+    }
+}
+
+@include v.tablet {
+    .page-header {
+        width: calc(100% - 5.25rem);
+        padding: 1.25rem 0;
+        &::before {
+            left: -(v.$deco-offset-tablet);
+            right: -2.625rem;
+        }
+        &::after {
+            content: none;
+        }
+    }
+
+    .page-title {
+        padding-left: 0;
+        font-weight: 400;
+        &::before {
+            content: none;
+        }
+    }
+}

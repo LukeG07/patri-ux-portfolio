@@ -92,19 +92,25 @@ Images are cropped to 545×384 (≈1.42:1) on desktop and 2:1 on mobile.
 
 Each role in "The journey so far" is a `<li class="journey__item">`. Add `journey__item--current` to the current role to give its ring the pink dot.
 
+## Updating the More work page
+
+`html/more-work.html` (linked from "See more work" on the home page) lists projects as the same `.work-card`s as the home page, each inside an `<li class="more-work__item">` so it gets a ring on the decorative line. Add or remove `<li>`s freely; the line always ends at the last one.
+
 ## Project structure
 
 ```
 index.html              Home page
-html/                    All other pages (about, case studies, illustrations, photography)
+html/                    All other pages (about, more work, case studies, illustrations, photography)
 styles/
   style.scss             Entry point — resets, global type scale, font imports, loads partials
   _variables.scss         Design tokens (colours, fonts, radii, layout widths), breakpoints and mixins
   _components.scss        Buttons (.btn--dark/--light/--outline) and the .reveal scroll animation
+  _page-header.scss       Page title with ring, rule and arc (About, More work)
   _home.scss              Nav + hamburger menu (every page), home hero
   _cards.scss             Home "Latest work" section and the .work-card component
   _projects.scss          Shared case-study page layout classes
   _about.scss             About page (intro, portrait, "The journey so far" timeline)
+  _more-work.scss         More work page
   _footer.scss            Footer (used on every page)
   style.css / .css.map    Compiled output — do not edit directly, edit the .scss instead
 js/mainFunctions.js       Scroll-reveal animations, navbar scroll color

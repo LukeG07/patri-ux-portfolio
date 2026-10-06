@@ -1,0 +1,80 @@
+@use "variables" as v;
+
+// ---------- More work page ----------
+// A list of .work-cards (see _cards.scss) hanging off the decorative line,
+// with a ring beside each card.
+
+$ring: 24px;
+$ring-lift: 4rem; // ring sits this far above the card's vertical centre
+
+.more-work {
+    overflow: clip; // trims the vertical line at the top of the page
+}
+
+.more-work__list {
+    width: 90%;
+    max-width: v.$work-width;
+    margin: 5.5rem auto 0;
+    padding-bottom: 5rem;
+    list-style: none;
+}
+
+.more-work__item {
+    position: relative;
+    padding: 0 20px 0 52px;
+    font-size: 1rem; // global `li` size would otherwise leak in
+
+    & + & {
+        margin-top: 3.5rem;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - #{$ring-lift} - #{$ring} / 2);
+        left: calc(-#{v.$deco-offset} - #{$ring} / 2 + 0.5px);
+        width: $ring;
+        height: $ring;
+        border: 1px solid v.$green-light;
+        border-radius: 50%;
+        background-color: v.$paper;
+    }
+
+    // vertical line from the nav down to the last ring
+    &:last-child::before {
+        content: "";
+        position: absolute;
+        bottom: calc(50% + #{$ring-lift});
+        left: -(v.$deco-offset);
+        width: 1px;
+        height: 400rem;
+        background-color: v.$green;
+    }
+}
+
+@include v.tablet {
+    .more-work__list {
+        width: calc(100% - 5.25rem);
+        margin-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .more-work__item {
+        padding: 0;
+
+        & + & {
+            margin-top: 3.25rem;
+        }
+
+        // on mobile the image sits on top: put the ring beside it
+        &::after {
+            top: 3rem;
+            left: calc(-#{v.$deco-offset-tablet} - #{$ring} / 2 + 0.5px);
+        }
+
+        &:last-child::before {
+            bottom: calc(100% - 3rem - #{$ring} / 2);
+            left: -(v.$deco-offset-tablet);
+        }
+    }
+}
