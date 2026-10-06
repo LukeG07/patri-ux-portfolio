@@ -1,44 +1,359 @@
 @use "variables" as v;
 
-.portrait-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .portrait-container .portrait-description {
-    flex: 1 1 0;
-  }
-  
-  .portrait {
-    flex: 1 1 0;
-    min-width: 0;
-    img {
-        min-width: 0;
-        //position: absolute;
-        //transform: scaleX(-1);
-        width: 100%;
-        // top: -30%;
-        // right: -150%;
-    }
-  }
-  
-  .about-intro {
-    font-family: Avenir;
-    font-weight: 900;
-  }
+// ---------- About page ----------
+// Decorations hang off the left edge of .about__inner (same offset as the
+// home page line), so they line up with the content at every width.
 
-  @include v.tablet {
-    .portrait-container {
-      flex-direction: column;
-      .portrait-description {
-        flex: 1 1 auto;
+$ring: 24px;
+$arc: 88px;
+$profile-pad: 88px; // indent of the intro/profile text from the content edge
+$ring-top: 40px; // where the vertical line ends, from the top of the portrait
+
+.about {
+    color: v.$navy;
+    font-family: v.$font-body;
+
+    p {
+        font-family: v.$font-body;
+        font-size: 1.125rem;
+        line-height: 1.75;
+    }
+}
+
+.about__inner {
+    width: 90%;
+    max-width: v.$work-width;
+    margin: 0 auto;
+}
+
+.about__top {
+    overflow: clip; // trims the vertical line at the top of the page
+}
+
+.about__header {
+    padding: 5.5rem 0 3.5rem;
+
+    .about__inner {
+        position: relative;
+        padding-left: 60px;
+
+        // ring to the left of the title
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: $ring;
+            height: $ring;
+            margin-top: calc(#{$ring} / -2);
+            border: 2px solid v.$green-light;
+            border-radius: 50%;
+        }
+
+        // rule under the title, from the vertical line out to the right
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -3.5rem;
+            left: -(v.$deco-offset);
+            right: -(v.$deco-offset);
+            height: 1px;
+            background-color: v.$green;
+        }
+    }
+}
+
+.about__title {
+    font-family: v.$font-body;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: v.$navy;
+}
+
+.about__intro {
+    max-width: 62rem;
+    margin-top: 7rem;
+    padding-left: $profile-pad;
+}
+
+.about__profile {
+    position: relative;
+    display: grid;
+    grid-template-columns: 435px minmax(0, 30.5rem);
+    column-gap: 62px;
+    align-items: center;
+    margin-top: 4rem;
+    padding-left: $profile-pad;
+
+    // vertical line running down from the nav, clipped by .about__top
+    &::before {
+        content: "";
+        position: absolute;
+        top: -200rem;
+        left: -(v.$deco-offset);
+        height: calc(200rem + #{$ring-top});
+        width: 1px;
+        background-color: v.$green;
+    }
+
+    // ring where the line ends
+    &::after {
+        content: "";
+        position: absolute;
+        top: $ring-top;
+        left: calc(-#{v.$deco-offset} - #{$ring} / 2 + 0.5px);
+        width: $ring;
+        height: $ring;
+        border: 1px solid v.$green;
+        border-radius: 50%;
+        background-color: v.$paper;
+    }
+}
+
+// Quarter arc where the line meets the rule under the title
+.about__intro {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -7rem;
+        left: -(v.$deco-offset);
+        width: $arc;
+        height: $arc;
+        border-right: 1px solid v.$green;
+        border-bottom: 1px solid v.$green;
+        border-bottom-right-radius: 100%;
+    }
+}
+
+.about__portrait {
+    aspect-ratio: 435 / 350;
+    overflow: hidden;
+    border-radius: v.$radius-sm;
+    background-color: v.$placeholder;
+    img {
+        display: block;
         width: 100%;
-      }
+        height: 100%;
+        object-fit: cover;
     }
-    .portrait {
-      flex: 1 1 auto;
-      width: 100%;
+}
+
+.about__bio a {
+    font: inherit;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    &:hover {
+        text-decoration-thickness: 2px;
     }
-  }
+    &:focus-visible {
+        outline: 2px solid v.$green;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+}
+
+.about__cv {
+    margin-top: 4.5rem;
+    text-align: center;
+}
+
+// ---------- The journey so far ----------
+
+$tl-ring: 22px;
+$tl-x: 30px; // timeline line, from the content edge
+$tl-pad: 76px; // item text, from the content edge
+
+.journey {
+    padding: 6rem 0 4rem;
+}
+
+.journey__title {
+    padding-left: 36px;
+    font-family: v.$font-body;
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: v.$navy;
+}
+
+.journey__list {
+    margin-top: 5rem;
+    list-style: none;
+}
+
+.journey__item {
+    position: relative;
+    padding: 0 60px 7.5rem $tl-pad;
+    font-size: 1rem; // global `li` size would otherwise leak in
+
+    // line from this item's ring down to the next one
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0.75rem;
+        bottom: 0;
+        left: $tl-x;
+        width: 1px;
+        background-color: v.$green-light;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: calc(#{$tl-x} - #{$tl-ring} / 2 + 0.5px);
+        width: $tl-ring;
+        height: $tl-ring;
+        border: 1px solid v.$green-light;
+        border-radius: 50%;
+        background-color: v.$paper;
+    }
+
+    // current role: pink dot inside the ring
+    &--current::after {
+        background-color: v.$pink-light;
+        box-shadow: inset 0 0 0 3px v.$paper;
+        border-width: 2px;
+    }
+}
+
+.journey__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding: 0 0.5rem 0.75rem 0;
+    // dashed rule drawn as a gradient so the dash length matches the design
+    background-image: linear-gradient(to right, v.$pink 6px, transparent 6px);
+    background-size: 10px 1.5px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+}
+
+.journey__company {
+    font-family: v.$font-body;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: v.$navy;
+}
+
+.about .journey__dates {
+    line-height: 1.2;
+}
+
+.journey__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@include v.tablet {
+    .about__inner {
+        width: calc(100% - 5.25rem);
+    }
+
+    .about__header {
+        padding: 1.25rem 0 1.25rem;
+
+        .about__inner {
+            padding-left: 0;
+            &::before {
+                content: none;
+            }
+            &::after {
+                bottom: -1.25rem;
+                left: -(v.$deco-offset-tablet);
+                right: -2.625rem;
+            }
+        }
+    }
+
+    .about__title {
+        font-weight: 400;
+    }
+
+    .about__intro {
+        margin-top: 2.5rem;
+        padding-left: 0;
+        &::before {
+            content: none;
+        }
+    }
+
+    .about__profile {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 3rem;
+        margin-top: 2.5rem;
+        padding-left: 0;
+
+        &::before {
+            left: -(v.$deco-offset-tablet);
+            height: calc(200rem + 6rem);
+        }
+
+        &::after {
+            top: calc(6rem - #{$ring} / 2);
+            left: calc(-#{v.$deco-offset-tablet} - #{$ring} / 2 + 0.5px);
+            background-color: v.$pink-light;
+            box-shadow: inset 0 0 0 3px v.$paper;
+            border-width: 2px;
+            border-color: v.$green-light;
+        }
+    }
+
+    .about__portrait {
+        aspect-ratio: 315 / 222;
+    }
+
+    .about__cv {
+        margin-top: 2.5rem;
+    }
+
+    .journey {
+        padding: 2.5rem 0 1.5rem;
+    }
+
+    .journey__title {
+        padding-left: 0;
+        font-size: 2.25rem;
+    }
+
+    .journey__list {
+        margin-top: 2.5rem;
+    }
+
+    .journey__item {
+        margin-left: -(v.$deco-offset-tablet);
+        padding: 0 0 4rem calc(#{v.$deco-offset-tablet} + 1.875rem);
+
+        &::before {
+            left: 0;
+        }
+        &::after {
+            left: calc(-#{$tl-ring} / 2 + 0.5px);
+        }
+    }
+
+    .journey__head {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 0.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .journey__company {
+        font-size: 1.5rem;
+    }
+
+    .journey__body {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0.75rem;
+    }
+}

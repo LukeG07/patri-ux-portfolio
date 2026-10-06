@@ -80,6 +80,18 @@ Each project in "Latest work" (`index.html`) is a `.work-card`. Variants are mod
 
 Images are cropped to 545×384 (≈1.42:1) on desktop and 2:1 on mobile.
 
+## Updating the About page
+
+`html/about.html` has a grey portrait placeholder. To use a real image, put an `<img>` inside it, the same as the home page cards:
+
+```html
+<div class="about__portrait">
+  <img src="../img/about/portrait.png" alt="" />
+</div>
+```
+
+Each role in "The journey so far" is a `<li class="journey__item">`. Add `journey__item--current` to the current role to give its ring the pink dot.
+
 ## Project structure
 
 ```
@@ -92,7 +104,7 @@ styles/
   _home.scss              Nav + hamburger menu (every page), home hero
   _cards.scss             Home "Latest work" section and the .work-card component
   _projects.scss          Shared case-study page layout classes
-  _about.scss             About page
+  _about.scss             About page (intro, portrait, "The journey so far" timeline)
   _footer.scss            Footer (used on every page)
   style.css / .css.map    Compiled output — do not edit directly, edit the .scss instead
 js/mainFunctions.js       Scroll-reveal animations, navbar scroll color
