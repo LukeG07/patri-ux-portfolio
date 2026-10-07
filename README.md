@@ -96,6 +96,17 @@ Each role in "The journey so far" is a `<li class="journey__item">`. Add `journe
 
 `html/more-work.html` (linked from "See more work" on the home page) lists projects as the same `.work-card`s as the home page, each inside an `<li class="more-work__item">` so it gets a ring on the decorative line. Add or remove `<li>`s freely; the line always ends at the last one.
 
+## Writing a case study
+
+Case study pages follow `new_design/case_study_template.png`; `html/fiverr-redesign.html` is a complete example to copy. The building blocks (styles in `styles/_case-study.scss`):
+
+- `.page-header.page-header--case` — title with the pink dot
+- `.case-section` with `.case-section__title` / `.case-section__subtitle`; add `case-section--ring` for a ring on the decorative line
+- `.case-overview` — overview text beside a `.case-panel` role box
+- `.case-panel.case-callout` — full-width pink dashed call-out
+- `.case-figure` (add `--wide` to break out of the text column), `.case-figure-pair` for two side by side, `.case-split` for an image beside text
+- `.other-projects` — "Other projects" heading followed by `.work-card`s
+
 ## Project structure
 
 ```
@@ -108,7 +119,8 @@ styles/
   _page-header.scss       Page title with ring, rule and arc (About, More work)
   _home.scss              Nav + hamburger menu (every page), home hero
   _cards.scss             Home "Latest work" section and the .work-card component
-  _projects.scss          Shared case-study page layout classes
+  _case-study.scss        Case study page (v3 template)
+  _projects.scss          Legacy case-study layout classes
   _about.scss             About page (intro, portrait, "The journey so far" timeline)
   _more-work.scss         More work page
   _footer.scss            Footer (used on every page)
