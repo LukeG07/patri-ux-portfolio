@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
+    <script src="../js/mainFunctions.js" defer></script>
+    <title>Patricia Santaengracia - Callout component review</title>
+</head>
+<body>
+    <main>
+        <div class="nav-container-alt">
+            <nav>
+              <a id="logo" href="../index.html" aria-label="Patri Santaengracia, home">
+                <span class="logo-name">Patri Santaengracia</span>
+                <span class="logo-symbol" aria-hidden="true"><span class="line"></span><span class="ring"></span></span>
+              </a>
+              <button class="burger-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+              <ul class="menu" id="site-menu">
+                <li class="menu-item"><a href="../index.html#projects-showcase">Work</a></li>
+                <li class="menu-item"><a href="./about.html">About me</a></li>
+                <li class="menu-item"><a href="#footer">Contact</a></li>
+              </ul>
+            </nav>
+            <script src="../scripts/script.js"></script>
+            <hr>
+        </div>
+        <article class="case-study">
+          <header class="page-header page-header--case">
+            <h1 class="page-title">Callout component review</h1>
+          </header>
+          <div class="case-study__body">
+            <section class="case-section case-overview">
+              <div class="case-overview__text">
+                <h2 class="case-section__title">Overview</h2>
+                <p>
+                  The Shelter Scotland advice team used multiple callout components across housing advice pages to highlight important information, redirects, and guidance. However, the content design team lacked clear guidelines around when each variation should be used and whether users interpreted them as intended.
+                </p>
+                <p>
+                  The project combined competitor analysis, workshops, and usability testing to review the effectiveness of existing callout patterns and establish clearer usage guidelines for the advice team.
+                </p>
+              </div>
+              <aside class="case-panel">
+                <h2 class="case-panel__title">Role</h2>
+                <p><strong>UX designer, Shelter Scotland</strong></p>
+                <ul>
+                  <li>Competitor analysis and pattern review</li>
+                  <li>Workshop planning and facilitation</li>
+                  <li>Reviewing existing component usage across advice pages</li>
+                  <li>Supporting usability testing setup and analysis</li>
+                  <li>Synthesising findings</li>
+                  <li>Writing up recommendations and final component guidelines</li>
+                  <li>Timeframe: 3 weeks</li>
+                  <li>Tools: Miro &amp; Lyssna</li>
+                </ul>
+              </aside>
+            </section>
+
+            <section class="case-section">
+              <p>
+                This was my first project at Shelter Scotland. I was responsible for driving the project, helping evaluate how users perceived callouts, whether they improved information visibility, and how effectively they supported users navigating high-stress advice journeys.
+              </p>
+              <p>
+                I worked closely with content designers and a researcher to help translate findings into practical standards for the advice team.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">The problem</h2>
+              <p>
+                Users visiting Shelter Scotland’s advice pages are often under stress and need to find information quickly.
+              </p>
+              <p>
+                Callouts were being used across the experience to highlight key information, urgent actions, and redirects, but their usage had evolved inconsistently over time. The content team lacked clear rules around:
+              </p>
+              <ul>
+                <li>Which callout should be used in different situations</li>
+                <li>Whether users understood the purpose of each variation</li>
+                <li>How callouts affected information visibility and perceived importance</li>
+                <li>Whether too many callouts reduced their effectiveness</li>
+              </ul>
+              <p>
+                At the time, multiple callout styles existed within Shelter’s Contentful, including warning callouts, highlighted information callouts, and redirect patterns.
+              </p>
+              <figure class="case-figure"><a href="../img/shelter-callouts/grey_callout.png" target="_blank" rel="noopener"><img src="../img/shelter-callouts/grey_callout.png" alt="Grey callout example: The winter eviction ban will be in force from December 2020"></a></figure>
+              <figure class="case-figure"><a href="../img/shelter-callouts/red_callout.png" target="_blank" rel="noopener"><img src="../img/shelter-callouts/red_callout.png" alt="Red callout example: Do not refuse a final offer, even if you think it’s not suitable. If you refuse the offer, the council may not have to help you any more."></a></figure>
+            </section>
+
+            <aside class="case-panel case-callout">
+              <h2 class="case-panel__title">Goal</h2>
+              <p>
+                Understand which callout patterns actually improved usability and create evidence-based guidance for future content design decisions.
+              </p>
+            </aside>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Research approach</h2>
+              <p>
+                The project combined competitor analysis, internal workshops, and unmoderated user testing in Lyssna.
+              </p>
+
+              <h3 class="case-section__subtitle">Competitor analysis</h3>
+              <p>
+                We reviewed callout usage across Shelter England, GOV.UK, NHS, Citizens Advice, and Energy Saving Trust. The analysis focused on:
+              </p>
+              <ul>
+                <li>Number of callout variations used</li>
+                <li>Visual hierarchy and placement</li>
+                <li>Content type and purpose</li>
+                <li>Frequency of use across pages</li>
+              </ul>
+              <p>
+                Most competitors used a small number of highly consistent callout styles supported by straightforward guidelines. The research also highlighted the importance of:
+              </p>
+              <ul>
+                <li>Clarity</li>
+                <li>Visibility</li>
+                <li>Limited frequency of use</li>
+                <li>Consistent placement</li>
+                <li>Strong visual hierarchy</li>
+              </ul>
+
+              <h3 class="case-section__subtitle">Workshops with the content design team</h3>
+              <p>
+                We ran two workshops to better understand how callouts were currently being used and where inconsistencies existed. The first workshop focused on:
+              </p>
+              <ul>
+                <li>Reviewing all existing callout patterns</li>
+                <li>Understanding when and why they were used</li>
+                <li>Evaluating effectiveness based on visibility, clarity, frequency, and placement</li>
+                <li>Identifying opportunities to simplify the component system</li>
+              </ul>
+              <p>
+                The review revealed several callout variations were repetitive, unclear, or rarely used. As a result, the team aligned around two primary callout types:
+              </p>
+              <ul>
+                <li><strong>Red inline callout</strong> for key information and urgent actions</li>
+                <li><strong>Grey inline callout</strong> for redirects, examples, and supporting content</li>
+              </ul>
+              <p>These findings informed the usability testing phase.</p>
+              <figure class="case-figure case-figure--wide"><a href="../img/shelter-callouts/callout_audit.png" target="_blank" rel="noopener"><img src="../img/shelter-callouts/callout_audit.png" alt="Workshop audit table of every callout pattern – what it is for, where it is placed, what it contains and how it benefits users – with team votes on whether to keep each one"></a></figure>
+
+              <h3 class="case-section__subtitle">User testing</h3>
+              <p>
+                We conducted unmoderated A/B testing through Lyssna to compare pages with and without callouts. Participants completed 10-second tests followed by short surveys designed to evaluate:
+              </p>
+              <ul>
+                <li>Information visibility</li>
+                <li>Attention capture</li>
+                <li>Ease of understanding</li>
+                <li>Perceived importance of content</li>
+              </ul>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Key findings</h2>
+
+              <h3 class="case-section__subtitle">Red callouts significantly improved visibility of key information</h3>
+              <div class="case-split case-split--narrow">
+                <figure class="case-figure"><a href="../img/shelter-callouts/key_info_ab_test.png" target="_blank" rel="noopener"><img src="../img/shelter-callouts/key_info_ab_test.png" alt="Key information callout A/B test: version A with the red callout and version B without it, with 10-second test results and design survey findings"></a></figure>
+                <div>
+                  <p>The red inline callout consistently outperformed pages without a callout. In testing:</p>
+                  <ul>
+                    <li><strong>60%</strong> of participants correctly identified key information within 10 seconds when the red callout was present</li>
+                    <li>Only <strong>33%</strong> identified the same information without the callout</li>
+                  </ul>
+                  <p>
+                    Most participants also identified the callout as the element that stood out most on the page. However, several users suggested the component should appear higher on the page, directly beneath the H1, to increase visibility further.
+                  </p>
+                  <p>
+                    The findings confirmed that the red callout successfully highlighted critical information and improved scanning behaviour.
+                  </p>
+                </div>
+              </div>
+
+              <h3 class="case-section__subtitle">Users developed “callout tunnel vision”</h3>
+              <p>
+                An unexpected finding emerged during testing. Many users focused heavily on information inside the callout while overlooking nearby content.
+              </p>
+              <p>
+                This suggested users treated callouts as highly trustworthy priority content, scanning them before surrounding information. The behaviour reinforced the importance of:
+              </p>
+              <ul>
+                <li>Including all essential information within the callout itself</li>
+                <li>Avoiding dependencies on nearby explanatory content</li>
+                <li>Using callouts sparingly to preserve effectiveness</li>
+              </ul>
+
+              <h3 class="case-section__subtitle">Grey backgrounds reduced effectiveness</h3>
+              <div class="case-split case-split--narrow">
+                <figure class="case-figure"><a href="../img/shelter-callouts/redirect_ab_test.png" target="_blank" rel="noopener"><img src="../img/shelter-callouts/redirect_ab_test.png" alt="Redirect callout A/B test comparing a redirect on a grey background with one on a white background, with 10-second test results and design survey findings"></a></figure>
+                <div>
+                  <p>
+                    Testing showed that redirect links performed better on white backgrounds than grey ones. Participants noticed blue hyperlinks more easily against white backgrounds, while grey backgrounds appeared easier to ignore.
+                  </p>
+                  <p>
+                    The findings aligned with “banner blindness” behaviour, where users subconsciously ignore elements resembling advertisements or banners.
+                  </p>
+                  <p>
+                    Several users also described pages with grey callouts as too wordy or visually dense. This led to recommendations to standardise white backgrounds across callout patterns.
+                  </p>
+                </div>
+              </div>
+
+              <h3 class="case-section__subtitle">Placement strongly influenced usability</h3>
+              <p>
+                Across multiple tests, participants repeatedly suggested placing important callouts higher on the page. Some users missed key information entirely because the callout appeared below the initial viewport.
+              </p>
+              <p>Others suggested stronger visual emphasis through:</p>
+              <ul>
+                <li>Increased contrast</li>
+                <li>Bold styling</li>
+                <li>Clearer borders</li>
+                <li>Reduced surrounding content clutter</li>
+              </ul>
+              <p>
+                The findings reinforced how closely placement and hierarchy affect information discoverability on long-form advice pages.
+              </p>
+            </section>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Outcome</h2>
+              <p>
+                The research directly informed a new set of callout guidelines for the Shelter Scotland advice team. The updated guidance established:
+              </p>
+              <ul>
+                <li>Clear definitions for red and grey callout usage</li>
+                <li>Consistent visual styling across advice pages</li>
+                <li>White backgrounds as the standard approach</li>
+                <li>Rules around placement, hierarchy, and frequency of use</li>
+                <li>Guidance for redirects, examples, urgent actions, and template content</li>
+              </ul>
+              <p>
+                The project also helped simplify the component system by removing unnecessary or overlapping callout variations.
+              </p>
+              <p>
+                It also influenced the wider organisation, with the research and guidelines included in Shelter’s design system.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Reflection</h2>
+              <p>
+                This project highlighted how even small interface components can significantly influence how users scan, prioritise, and trust information.
+              </p>
+              <p>
+                The research reinforced that effective content design is not only about visual emphasis, but also about consistency and clear behavioural patterns.
+              </p>
+              <p>
+                One of the most interesting findings was how strongly users prioritised information inside callouts, often at the expense of surrounding content. This demonstrated the responsibility that comes with using attention-directing components and the importance of using them intentionally.
+              </p>
+              <p>
+                The project also strengthened collaboration between UX, research, and content design by creating shared standards grounded in user evidence rather than individual preference.
+              </p>
+            </section>
+          </div>
+
+          <section class="other-projects">
+            <h2 class="other-projects__title">Other projects</h2>
+            <article class="work-card">
+              <div class="work-card__text reveal">
+                <h3 class="work-card__title">
+                  <strong>Stepper tool accessibility |</strong> Housing advice
+                </h3>
+                <p class="work-card__body">
+                  Making a step-by-step advice tool clearer with a one-question-at-a-time pattern.
+                </p>
+                <a class="btn btn--dark work-card__cta" href="./stepper-accessibility.html">Read case study</a>
+              </div>
+              <div class="work-card__media reveal" aria-hidden="true"></div>
+            </article>
+          </section>
+        </article>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Want to work together?</h2>
+      <p class="site-footer__text">
+        If you're working on something exciting or just want to connect, I'd love to hear from you!
+      </p>
+      <div class="site-footer__links">
+        <a href="" aria-label="Email">
+          <img src="../img/footer/email.png" alt="" width="34" height="34" />
+        </a>
+        <a href="https://www.linkedin.com/in/patricia-santaengracia-527683211/?originalSubdomain=uk" aria-label="LinkedIn">
+          <img src="../img/footer/linked-in.png" alt="" width="34" height="34" />
+        </a>
+      </div>
+    </footer>
+</body>
+</html>

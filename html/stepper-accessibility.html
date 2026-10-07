@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
+    <script src="../js/mainFunctions.js" defer></script>
+    <title>Patricia Santaengracia - Stepper tool accessibility</title>
+</head>
+<body>
+    <main>
+        <div class="nav-container-alt">
+            <nav>
+              <a id="logo" href="../index.html" aria-label="Patri Santaengracia, home">
+                <span class="logo-name">Patri Santaengracia</span>
+                <span class="logo-symbol" aria-hidden="true"><span class="line"></span><span class="ring"></span></span>
+              </a>
+              <button class="burger-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+              <ul class="menu" id="site-menu">
+                <li class="menu-item"><a href="../index.html#projects-showcase">Work</a></li>
+                <li class="menu-item"><a href="./about.html">About me</a></li>
+                <li class="menu-item"><a href="#footer">Contact</a></li>
+              </ul>
+            </nav>
+            <script src="../scripts/script.js"></script>
+            <hr>
+        </div>
+        <article class="case-study">
+          <header class="page-header page-header--case">
+            <h1 class="page-title">Accessibility improvements for the stepper tool</h1>
+          </header>
+          <div class="case-study__body">
+            <section class="case-section case-overview">
+              <div class="case-overview__text">
+                <h2 class="case-section__title">Overview</h2>
+                <p>
+                  The stepper tool helps users navigate complex housing advice by asking a series of questions and using their answers to provide relevant advice. It is particularly useful when the advice depends on several circumstances, such as tenancy type.
+                </p>
+                <p>
+                  Accessibility and usability testing with disabled users, conducted by AbilityNet, identified issues with the existing interaction. In particular, one participant did not notice that a new question had appeared after answering the first, while another found the number of options difficult to manage.
+                </p>
+              </div>
+              <aside class="case-panel">
+                <h2 class="case-panel__title">Role</h2>
+                <p><strong>UX designer</strong></p>
+                <ul>
+                  <li>Reviewing accessibility findings, requirements and established patterns</li>
+                  <li>Prototyping the updated stepper</li>
+                  <li>Design critique and A/B testing</li>
+                </ul>
+              </aside>
+            </section>
+
+            <section class="case-section">
+              <p>
+                I reviewed the findings alongside the existing stepper pattern, accessibility requirements and established design patterns, then developed and tested a proposed iteration of the component.
+              </p>
+            </section>
+
+            <aside class="case-panel case-callout">
+              <h2 class="case-panel__title">Outcome</h2>
+              <p>
+                A proposed update to the stepper pattern, including a one-question-at-a-time interaction, clearer progression, improved handling of previous answers and accessibility improvements. The proposal is currently under review by Shelter England.
+              </p>
+            </aside>
+
+            <section class="case-section">
+              <h2 class="case-section__title">The problem</h2>
+              <p>
+                The existing stepper breaks complex advice into a series of questions. Users answer each question and the next relevant question is revealed on the same page.
+              </p>
+              <p>
+                This approach reduces the amount of irrelevant information users need to read, but the existing pattern has some limitations:
+              </p>
+              <ul>
+                <li>New questions can appear further down the page, meaning users may not realise that the content has changed.</li>
+                <li>Longer steppers can become difficult to navigate, particularly when users need to go back and change an earlier answer.</li>
+                <li>Results can contain a large amount of text and links, which may be overwhelming for some users.</li>
+                <li>Dynamically revealing questions creates accessibility challenges because changes to the page are not reliably communicated to assistive technologies.</li>
+                <li>When several navigation elements are present on the same page, users may need to distinguish between the stepper and other page navigation.</li>
+              </ul>
+              <p>
+                These issues became particularly relevant when the tenancy checker was included in accessibility and usability testing with disabled users.
+              </p>
+
+              <h3 class="case-section__subtitle">What we observed</h3>
+              <p>Two participants experienced difficulties with the stepper:</p>
+              <ul>
+                <li><strong>P01</strong> was confused by the radio-button options and attempted to select multiple answers.</li>
+                <li><strong>P02</strong>, who had cognitive access needs, found the number of options difficult to manage and did not notice that the next question had appeared below the first until prompted. They also felt the two question boxes were too close together.</li>
+              </ul>
+            </section>
+
+            <aside class="case-panel case-callout">
+              <h2 class="case-panel__title">The question</h2>
+              <p>
+                Could the stepper make progression between questions more explicit and reduce the amount users need to process at each stage?
+              </p>
+            </aside>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Exploring the solution</h2>
+              <p>
+                We reviewed the accessibility issues alongside established patterns and guidance, including the <a href="https://design-system.service.gov.uk/">GOV.UK</a> <strong>form and decision-making patterns</strong> and WCAG 2.2 requirements.
+              </p>
+              <p>
+                The main direction was to move from revealing multiple questions on the same page to a <strong>one-question-at-a-time pattern</strong>. We proposed:
+              </p>
+              <ul>
+                <li>Showing one question at a time, with a <strong>Next</strong> button to progress.</li>
+                <li>Automatically scrolling to the relevant point after progressing.</li>
+                <li>Showing previous questions and answers so users can review their journey.</li>
+                <li>Providing an error message when users try to continue without answering.</li>
+                <li>Allowing the stepper to use either an H2 or H3 heading, depending on its context.</li>
+                <li>Improving the presentation of results, including exploring accordions to reduce the amount of information displayed at once.</li>
+              </ul>
+              <p>
+                The one-question-at-a-time approach was particularly important for accessibility. Rather than relying on users to notice that new content had appeared further down the page, <strong>the user actively triggers the next step</strong>. This makes the progression more predictable and reduces reliance on dynamically revealed content.
+              </p>
+              <p>
+                Displaying previous answers also supports users who need to review their choices and aligns with the GOV.UK pattern for avoiding unnecessary re-entry of information, supporting <strong>WCAG 2.2's Redundant Entry criterion</strong>.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">From recommendations to prototype</h2>
+              <p>
+                Based on the review, I developed a prototype of the proposed pattern. We took the prototype through <strong>two rounds of design critique</strong>, iterating on the interaction, content and component behaviour.
+              </p>
+              <p>Some of the changes included:</p>
+              <ul>
+                <li>Renaming <strong>“Selected options”</strong> to <strong>“Your answers”</strong>.</li>
+                <li>Providing a flexible heading level for different contexts.</li>
+                <li>Refining the error message to <strong>“Please select an option.”</strong></li>
+                <li>Adding <strong>Start again</strong> and <strong>Edit your answer</strong> actions.</li>
+                <li>Refining the positioning and styling of these actions to avoid competing with the primary <strong>Next</strong> action.</li>
+                <li>Improving the auto-scroll behaviour when users reach results or choose to start again.</li>
+                <li>Exploring clearer separation between questions so that newly revealed content is easier to notice.</li>
+              </ul>
+              <p>
+                The final design remained an iteration of the existing stepper rather than introducing a completely new component. The Scotland team already uses the stepper across advice content and considers it easier to embed and maintain in Contentful than the existing decision-tree pattern.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Testing</h2>
+              <p>We then compared the existing and updated versions of the stepper through A/B testing. We tested:</p>
+              <ul>
+                <li><strong>Desktop:</strong> existing version vs proposed version</li>
+                <li><strong>Mobile:</strong> existing version vs proposed version</li>
+              </ul>
+              <p>
+                The task asked participants to use a tenancy checker to determine their tenancy type and whether their landlord had followed the correct process. We looked at:
+              </p>
+              <ul>
+                <li>Initial errors</li>
+                <li>Error recovery</li>
+                <li>Task completion time</li>
+                <li>Perceived usability</li>
+                <li>How logical the question order felt</li>
+                <li>Whether users knew what information was expected of them</li>
+                <li>Overall satisfaction</li>
+              </ul>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">What we found</h2>
+              <p>
+                Overall, <strong>all four versions performed well</strong>. Participants made few errors and most understood how the tenancy checker worked after reading the scenario.
+              </p>
+              <p>
+                Importantly, the proposed accessibility changes <strong>did not introduce a negative impact for users without identified accessibility requirements</strong>.
+              </p>
+              <p>There were some differences between versions:</p>
+              <ul>
+                <li>One participant using the existing desktop version took some time to realise they needed to scroll after answering the first question.</li>
+                <li>Two participants using the existing mobile version said it was not immediately obvious that there was another step after answering the first question.</li>
+                <li>The updated versions performed marginally better overall, particularly on mobile.</li>
+                <li>The updated mobile version received higher ratings for aspects related to input and speed.</li>
+                <li>The existing desktop version scored slightly higher in some survey questions, although observed behaviour was very similar between the two versions.</li>
+              </ul>
+              <p>
+                There was also a separate content issue: two participants struggled to identify the option for renting from a letting agent because it was combined with renting from a private landlord. We recommended separating these options even though they currently lead to the same advice.
+              </p>
+            </section>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Iterations and next steps</h2>
+              <p>Testing and stakeholder feedback led to several further refinements, including improvements to:</p>
+              <ul>
+                <li>Auto-scroll behaviour when reaching the results.</li>
+                <li>Auto-scroll when selecting <strong>Start again</strong>.</li>
+                <li>The positioning and styling of <strong>Start again</strong> and <strong>Edit your answer</strong>.</li>
+                <li>The heading hierarchy.</li>
+                <li>The presentation of the answer history.</li>
+              </ul>
+              <p>
+                The auto-scroll issues on the results and <strong>Start again</strong> states were subsequently resolved.
+              </p>
+              <p>
+                The proposed stepper pattern is currently <strong>under review by Shelter England</strong> before wider implementation in the design system.
+              </p>
+            </section>
+          </div>
+
+          <section class="other-projects">
+            <h2 class="other-projects__title">Other projects</h2>
+            <article class="work-card">
+              <div class="work-card__text reveal">
+                <h3 class="work-card__title">
+                  <strong>Campaigns page research &amp; redesign |</strong> Shelter Scotland
+                </h3>
+                <p class="work-card__body">
+                  Usability testing and card sorting that reshaped how the campaigns page balances information and action.
+                </p>
+                <a class="btn btn--dark work-card__cta" href="./shelter-campaigns.html">Read case study</a>
+              </div>
+              <div class="work-card__media reveal">
+                <img src="../img/shelter-campaigns/cover.jpg" alt="Prototype of the redesigned Shelter Scotland campaigns page" />
+              </div>
+            </article>
+          </section>
+        </article>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Want to work together?</h2>
+      <p class="site-footer__text">
+        If you're working on something exciting or just want to connect, I'd love to hear from you!
+      </p>
+      <div class="site-footer__links">
+        <a href="" aria-label="Email">
+          <img src="../img/footer/email.png" alt="" width="34" height="34" />
+        </a>
+        <a href="https://www.linkedin.com/in/patricia-santaengracia-527683211/?originalSubdomain=uk" aria-label="LinkedIn">
+          <img src="../img/footer/linked-in.png" alt="" width="34" height="34" />
+        </a>
+      </div>
+    </footer>
+</body>
+</html>

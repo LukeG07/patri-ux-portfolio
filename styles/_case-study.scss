@@ -22,6 +22,23 @@ $dash: #d39bb9;
         font-size: 1.125rem;
         line-height: 1.75;
     }
+
+    p a,
+    li a {
+        font: inherit;
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        &:hover {
+            text-decoration-thickness: 2px;
+        }
+        &:focus-visible {
+            outline: 2px solid v.$green;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+    }
 }
 
 // pink dot beside the title instead of the green ring
@@ -122,6 +139,35 @@ $dash: #d39bb9;
     }
 }
 
+// small label heading inside a subsection (e.g. "Chat closed")
+.case-section__minor {
+    font-family: v.$font-body;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: v.$navy;
+
+    * + & {
+        margin-top: 2.25rem;
+    }
+}
+
+// pull quote from research participants
+.case-quote {
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    border-left: 3px solid #dea4c4;
+
+    p {
+        font-size: 1.25rem;
+        font-style: italic;
+        line-height: 1.6;
+    }
+
+    p + p {
+        margin-top: 0.75rem;
+    }
+}
+
 // ---------- Overview + role ----------
 
 .case-overview {
@@ -198,6 +244,16 @@ $dash: #d39bb9;
 .case-figure {
     margin: 3rem 0 0;
 
+    // figures link to the full-size image
+    a {
+        display: block;
+        border-radius: v.$radius-sm;
+        &:focus-visible {
+            outline: 2px solid v.$green;
+            outline-offset: 3px;
+        }
+    }
+
     img {
         display: block;
         width: 100%;
@@ -213,6 +269,13 @@ $dash: #d39bb9;
         color: v.$green;
         text-align: center;
     }
+}
+
+// small images (tall screenshots, single components): keep them modest
+.case-figure--narrow {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // slightly wider than the text column, still centred
@@ -234,6 +297,12 @@ $dash: #d39bb9;
     }
 }
 
+.case-figure-pair--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 2rem;
+    align-items: center;
+}
+
 // image beside text
 .case-split {
     display: grid;
@@ -248,6 +317,12 @@ $dash: #d39bb9;
 
     > div > * + * {
         margin-top: 1.5rem;
+    }
+
+    // tall, narrow image beside a longer block of text
+    &--narrow {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+        column-gap: 3rem;
     }
 }
 
@@ -298,9 +373,14 @@ $dash: #d39bb9;
 
     .case-overview,
     .case-split,
-    .case-figure-pair {
+    .case-figure-pair,
+    .case-figure-pair--three {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 2rem;
+    }
+
+    .case-quote p {
+        font-size: 1.125rem;
     }
 
     .case-figure--wide {

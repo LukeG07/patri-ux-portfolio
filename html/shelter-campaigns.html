@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/cab1dbf.css">
+    <script src="../js/mainFunctions.js" defer></script>
+    <title>Patricia Santaengracia - Campaigns page research & redesign</title>
+</head>
+<body>
+    <main>
+        <div class="nav-container-alt">
+            <nav>
+              <a id="logo" href="../index.html" aria-label="Patri Santaengracia, home">
+                <span class="logo-name">Patri Santaengracia</span>
+                <span class="logo-symbol" aria-hidden="true"><span class="line"></span><span class="ring"></span></span>
+              </a>
+              <button class="burger-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+              <ul class="menu" id="site-menu">
+                <li class="menu-item"><a href="../index.html#projects-showcase">Work</a></li>
+                <li class="menu-item"><a href="./about.html">About me</a></li>
+                <li class="menu-item"><a href="#footer">Contact</a></li>
+              </ul>
+            </nav>
+            <script src="../scripts/script.js"></script>
+            <hr>
+        </div>
+        <article class="case-study">
+          <header class="page-header page-header--case">
+            <h1 class="page-title">Campaigns page research &amp; redesign</h1>
+          </header>
+          <div class="case-study__body">
+            <section class="case-section case-overview">
+              <div class="case-overview__text">
+                <h2 class="case-section__title">Overview</h2>
+                <p>
+                  Shelter Scotland’s campaigns page had never been formally tested, despite being a key area for encouraging public engagement with housing issues and advocacy initiatives. Existing heatmap data suggested users were more interested in learning about Shelter Scotland’s campaigns than actively participating in them, but it was unclear whether this reflected genuine user intent or usability issues within the experience itself.
+                </p>
+                <p>
+                  The project uncovered significant issues around campaign discoverability, content hierarchy, and user understanding of campaign actions. These findings directly informed a redesigned campaign page structure and sparked broader conversations around the site’s information architecture.
+                </p>
+              </div>
+              <aside class="case-panel">
+                <h2 class="case-panel__title">Role</h2>
+                <p><strong>UX designer, Shelter Scotland</strong></p>
+                <ul>
+                  <li>Co-lead research planning, user testing, design exploration and recommendations</li>
+                  <li>Timeframe: 3 weeks</li>
+                  <li>Tools: Miro, Figma &amp; Userlytics</li>
+                </ul>
+              </aside>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">The problem</h2>
+              <p>
+                The campaigns section plays an important role in helping users understand housing issues in Scotland and engage with Shelter Scotland’s advocacy work. However, the page had evolved over time without dedicated usability testing, creating uncertainty around how effectively users could:
+              </p>
+              <ul>
+                <li>Discover campaign-related content</li>
+                <li>Understand the purpose of the campaigns section</li>
+                <li>Identify meaningful actions they could take</li>
+                <li>Navigate between educational content and campaign participation</li>
+              </ul>
+              <p>
+                We suspected that users may have been experiencing friction when navigating to campaigns organically, either through the homepage or the About Us section. Existing behavioural data also suggested users were consuming campaign-related information but engaging less with campaign actions such as petitions or advocacy initiatives.
+              </p>
+            </section>
+
+            <aside class="case-panel case-callout">
+              <h2 class="case-panel__title">Goal</h2>
+              <p>
+                Identify usability issues and uncover opportunities to improve how campaigns were structured, understood, and explored across the site.
+              </p>
+            </aside>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Research</h2>
+              <p>
+                We conducted remote unmoderated usability testing using Userlytics to understand how users interacted with the campaigns section and whether the existing experience aligned with their expectations. Participants completed a series of think-aloud tasks while their sessions were recorded for later review and analysis.
+              </p>
+              <p>The research focused on three key areas:</p>
+              <ul>
+                <li>Discoverability of campaign content</li>
+                <li>Findability of campaign actions</li>
+                <li>Comprehension of campaign messaging</li>
+              </ul>
+
+              <h3 class="case-section__subtitle">Task 1: Understanding user expectations</h3>
+              <p>
+                To better understand what users expected to find within the campaigns section, we ran a closed card sorting exercise. Participants were asked to categorise different pieces of Shelter Scotland content under existing top-level navigation labels such as:
+              </p>
+              <ul>
+                <li>Housing Advice</li>
+                <li>Get Involved</li>
+                <li>About Us</li>
+                <li>Campaigns</li>
+                <li>Shop</li>
+              </ul>
+              <p>
+                The exercise helped us evaluate whether the existing information architecture matched user mental models and where users expected campaign-related content to live.
+              </p>
+
+              <h3 class="case-section__subtitle">Task 2: Finding and engaging with a campaign</h3>
+              <p>
+                Participants started on the Shelter Scotland homepage and were asked to locate and engage with a homelessness-related campaign petition. This task allowed us to observe:
+              </p>
+              <ul>
+                <li>Whether users could intuitively locate campaign content</li>
+                <li>How users interpreted campaign calls to action</li>
+                <li>Which navigation pathways users naturally followed</li>
+                <li>Whether campaign-related language and structure supported engagement</li>
+              </ul>
+              <p>
+                We intentionally allowed participants to take alternative routes through the site, as these behaviours revealed where users expected campaign activity to exist.
+              </p>
+
+              <h3 class="case-section__subtitle">Task 3: Understanding campaign messaging</h3>
+              <p>
+                Participants were then directed to campaign-related content focused on social housing and asked to:
+              </p>
+              <ul>
+                <li>Find key information</li>
+                <li>Explain their understanding of the content</li>
+                <li>Reflect on the clarity and effectiveness of the messaging</li>
+              </ul>
+              <p>
+                This task helped us evaluate both findability and comprehension, while also uncovering how effectively long-form campaign content supported engagement and understanding.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Key findings</h2>
+
+              <h3 class="case-section__subtitle">Users associated campaigns with action, not information</h3>
+              <div class="case-split case-split--narrow">
+                <figure class="case-figure"><a href="../img/shelter-campaigns/card_sort_results.png" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/card_sort_results.png" alt="Card sorting results: housing advice, get involved and shop cards were sorted consistently, while campaign-related cards were spread across several categories"></a></figure>
+                <div>
+                  <p>
+                    The card sorting exercise revealed significant uncertainty around the “Campaigns” category. Compared to other navigation areas, campaign-related content was distributed far more inconsistently across categories.
+                  </p>
+                  <p>
+                    Most participants associated campaigns with direct action rather than educational or informational content. Users expected campaigns to involve petitions, advocacy opportunities, or ways to actively support Shelter Scotland’s work.
+                  </p>
+                  <blockquote class="case-quote">
+                    <p>“I don’t know what Housing SOS is. I think that’s just finding out more info rather than being proactive.”</p>
+                  </blockquote>
+                  <p>
+                    This mismatch between user expectations and content structure created confusion around what the campaigns section actually offered.
+                  </p>
+                </div>
+              </div>
+              <figure class="case-figure case-figure--wide"><a href="../img/shelter-campaigns/card_sort_groups.png" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/card_sort_groups.png" alt="Card sorting cards regrouped by highest agreement into themes: help us learn, doing something with Shelter, who is Shelter, doing something for Shelter, and where are the shops"></a></figure>
+              <figure class="case-figure case-figure--wide"><a href="../img/shelter-campaigns/card_sort_comments.png" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/card_sort_comments.png" alt="Participant comments from the card sort, grouped by category, with recurring keywords such as learn, doing, involved and participate"></a></figure>
+
+              <h3 class="case-section__subtitle">Campaign actions lacked visibility</h3>
+              <p>
+                In the navigation task only one participant successfully located the intended campaign through the expected pathway.
+              </p>
+              <p>
+                Several participants explored alternative sections of the site instead, particularly areas focused on help or getting involved. Others became distracted by the RAGE campaign content featured prominently on both the homepage and campaigns page.
+              </p>
+              <p>
+                Two participants skipped over the “Take Action” section entirely, while another explicitly noted that the campaign did not stand out visually.
+              </p>
+              <p>
+                The findings suggested that campaign actions were not clearly differentiated from informational content, making engagement opportunities easy to miss.
+              </p>
+              <blockquote class="case-quote">
+                <p>“Big buttons that say, you know, find out more, fundraise with us, join our campaigns and get advice might be nice.”</p>
+              </blockquote>
+
+              <h3 class="case-section__subtitle">Users confused the campaigns page with the homepage</h3>
+              <p>
+                Three participants mistook the campaigns page for the homepage due to similarities in layout and content structure.
+              </p>
+              <p>
+                This reduced users’ understanding of where they were within the site and weakened the distinction between general awareness content and campaign-specific engagement. The overlap also contributed to navigation uncertainty and made campaign journeys feel less intentional.
+              </p>
+              <div class="case-figure-pair">
+                <figure class="case-figure"><a href="../img/shelter-campaigns/rage_hero_1.jpg" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/rage_hero_1.jpg" alt="Mobile page opening with the RAGE campaign: Add your name to the Official Record of RAGE against the housing emergency"></a></figure>
+                <figure class="case-figure"><a href="../img/shelter-campaigns/rage_hero_2.jpg" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/rage_hero_2.jpg" alt="A second mobile page opening with the same RAGE campaign hero image and heading"></a></figure>
+              </div>
+
+              <h3 class="case-section__subtitle">Users understood the messaging but struggled with content length</h3>
+              <p>
+                All participants successfully located and understood the social housing content.
+              </p>
+              <p>
+                Most users clearly articulated the purpose and benefits of social housing, suggesting the messaging itself was effective. However, participants consistently described the content as overly long and visually overwhelming.
+              </p>
+              <div class="case-split">
+                <figure class="case-figure"><a href="../img/shelter-campaigns/social_housing_content.jpg" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/social_housing_content.jpg" alt="The value of social housing page: a bulleted list, a quote from a tenant and four dense paragraphs explaining how social housing should work"></a></figure>
+                <div>
+                  <p>
+                    Large blocks of text created fatigue and reduced engagement, particularly when users were scanning for key information.
+                  </p>
+                  <blockquote class="case-quote">
+                    <p>“Having the wordiness of it could potentially be a barrier.”</p>
+                    <p>“This is a wall of text that I would struggle with.”</p>
+                  </blockquote>
+                </div>
+              </div>
+              <p>
+                Participants responded positively to sections containing statistics and structured information, suggesting that more visual hierarchy and content chunking would improve readability.
+              </p>
+              <figure class="case-figure"><a href="../img/shelter-campaigns/social_housing_stats.png" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/social_housing_stats.png" alt="The problem we’re facing: three statistics – 110,000 households on waiting lists, 10,110 children and 16,330 households in temporary accommodation"></a></figure>
+
+              <h3 class="case-section__subtitle">Users wanted clearer next steps after reading</h3>
+              <p>
+                A recurring theme across sessions was uncertainty around what users could do after consuming campaign content.
+              </p>
+              <p>
+                Participants expected clearer pathways into action and wanted stronger connections between educational content and opportunities to support Shelter Scotland’s work. Several users reached the end of articles feeling the experience simply stopped rather than guiding them toward meaningful engagement.
+              </p>
+              <blockquote class="case-quote">
+                <p>“You get to the end of the article and the response is ‘okay, what can I do about this?’ And the page ends.”</p>
+              </blockquote>
+              <p>
+                This highlighted a disconnect between awareness-building content and actionable participation.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Design proposal</h2>
+              <p>
+                The findings directly informed a proposed redesign of the campaigns page focused on improving clarity, hierarchy, and engagement. The new direction aimed to:
+              </p>
+              <ul>
+                <li>Clearly separate campaigns from articles and supporting content</li>
+                <li>Reduce visual clutter across the page</li>
+                <li>Create stronger distinction between informational and action-oriented content</li>
+                <li>Improve visibility of campaign actions and participation opportunities</li>
+                <li>Encourage progressive engagement as users scrolled through the experience</li>
+              </ul>
+              <p>
+                The revised hierarchy presented campaigns more intentionally and reduced competition between content types. Campaigns were given clearer prominence, while blog and article content was repositioned into dedicated supporting sections.
+              </p>
+              <p>We also identified opportunities to:</p>
+              <ul>
+                <li>Redesign the “Take Action” section</li>
+                <li>Improve campaign labelling and content clarity</li>
+                <li>Introduce stronger visual hierarchy and clearer calls to action</li>
+                <li>Break long-form content into more digestible sections using quotes, statistics, and visual components</li>
+                <li>Surface relevant actions directly alongside campaign education content</li>
+              </ul>
+              <figure class="case-figure case-figure--wide"><a href="../img/shelter-campaigns/redesign.png" target="_blank" rel="noopener"><img src="../img/shelter-campaigns/redesign.png" alt="The existing campaigns page annotated with findings, a wireframe based on our recommendations, and a prototype of the redesigned page"></a></figure>
+              <p>
+                The project ultimately shifted the focus from simply presenting campaign information to actively supporting campaign engagement.
+              </p>
+            </section>
+
+            <section class="case-section case-section--ring">
+              <h2 class="case-section__title">Outcome &amp; next steps</h2>
+              <p>
+                The recommendations from this research informed upcoming updates to the campaigns experience alongside the launch of new campaigns.
+              </p>
+              <p>
+                More importantly, the project sparked broader discussions around the website’s information architecture and highlighted the need for clearer separation between informational, organisational, and advocacy-related content across the platform.
+              </p>
+              <p>
+                The work also reinforced the importance of aligning campaign experiences with user expectations. Users were motivated to engage with Shelter Scotland’s mission, but the existing structure and presentation often made participation difficult to recognise or act upon.
+              </p>
+              <p>
+                By identifying where users experienced friction, confusion, and content fatigue, we were able to establish a clearer foundation for future campaign and content design decisions.
+              </p>
+            </section>
+
+            <section class="case-section">
+              <h2 class="case-section__title">Reflection</h2>
+              <p>
+                One of the most valuable insights from this project was recognising how strongly users associated campaigns with action and participation rather than information alone.
+              </p>
+              <p>
+                While the original experience prioritised awareness-building content, the research showed that users expected clearer pathways into support. Small changes in hierarchy, labelling, and content structure had a significant impact on how users interpreted the purpose of the page.
+              </p>
+              <p>
+                The project also highlighted how closely content strategy, information architecture, and UX design influence one another. Many of the usability issues we uncovered were not caused by individual interface components, but by broader structural and organisational decisions across the experience.
+              </p>
+              <p>
+                This research became an important starting point for wider conversations about navigation, content discoverability, and engagement across the Shelter Scotland website.
+              </p>
+            </section>
+          </div>
+
+          <section class="other-projects">
+            <h2 class="other-projects__title">Other projects</h2>
+            <article class="work-card">
+              <div class="work-card__text reveal">
+                <h3 class="work-card__title">
+                  <strong>Webchat CTA research |</strong> Shelter Scotland
+                </h3>
+                <p class="work-card__body">
+                  Setting expectations and offering alternatives when webchat is busy or closed.
+                </p>
+                <a class="btn btn--dark work-card__cta" href="./shelter-webchat.html">Read case study</a>
+              </div>
+              <div class="work-card__media reveal">
+                <img src="../img/shelter-webchat/cover.jpg" alt="Shelter Scotland online chat page showing the Chat closed button" />
+              </div>
+            </article>
+          </section>
+        </article>
+    </main>
+    <footer id="footer" class="site-footer">
+      <h2 class="site-footer__title">Want to work together?</h2>
+      <p class="site-footer__text">
+        If you're working on something exciting or just want to connect, I'd love to hear from you!
+      </p>
+      <div class="site-footer__links">
+        <a href="" aria-label="Email">
+          <img src="../img/footer/email.png" alt="" width="34" height="34" />
+        </a>
+        <a href="https://www.linkedin.com/in/patricia-santaengracia-527683211/?originalSubdomain=uk" aria-label="LinkedIn">
+          <img src="../img/footer/linked-in.png" alt="" width="34" height="34" />
+        </a>
+      </div>
+    </footer>
+</body>
+</html>
