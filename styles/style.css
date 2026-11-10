@@ -338,7 +338,7 @@ nav {
   align-items: center;
   gap: 0.75rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   white-space: nowrap;
 }
@@ -371,13 +371,13 @@ nav {
 }
 
 .menu li {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
 .menu a {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -548,9 +548,9 @@ nav {
   max-width: 38rem;
   margin-top: 2.25rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 .hero__scroll {
@@ -602,13 +602,15 @@ nav {
   .hero__title::after {
     content: none;
   }
+  #logo {
+    font-size: 1rem;
+  }
   .hero {
     min-height: 0;
     padding: calc(80px + 1.5rem) 0 5rem;
   }
   .hero__intro {
     margin-top: 1rem;
-    font-size: 1rem;
   }
   .hero__scroll {
     bottom: 1.25rem;
@@ -879,7 +881,6 @@ nav {
   }
   .work-card__body {
     margin: 0.75rem 0 2rem;
-    font-size: 1.125rem;
   }
 }
 /* Project pages */
@@ -1090,8 +1091,8 @@ nav {
 
 .about p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 .about__inner {
@@ -1274,8 +1275,8 @@ nav {
 
 .journey__desc li {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 .journey__desc li + li {
@@ -1429,8 +1430,8 @@ nav {
 .case-study p,
 .case-study li {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 .case-study p a,
@@ -1603,7 +1604,7 @@ nav {
 
 .case-panel p,
 .case-panel li {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -1722,6 +1723,10 @@ nav {
   padding: 4rem 0 6rem;
 }
 
+.other-projects .work-card__body {
+  line-height: 1.2;
+}
+
 .other-projects__title {
   margin-bottom: 4rem;
   padding-left: 20px;
@@ -1759,9 +1764,6 @@ nav {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 2rem;
   }
-  .case-quote p {
-    font-size: 1.125rem;
-  }
   .case-figure--wide {
     width: 100%;
     margin-left: 0;
@@ -1781,12 +1783,6 @@ nav {
     margin-bottom: 2rem;
     padding-left: 0;
     font-size: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .case-study p,
-  .case-study li {
-    font-size: 1rem;
   }
 }
 .site-footer {

@@ -14,8 +14,8 @@ $ring-top: 40px; // where the vertical line ends, from the top of the portrait
 
     p {
         font-family: v.$font-body;
-        font-size: 1.125rem;
-        line-height: 1.75;
+        font-size: 1.25rem;
+        line-height: 1.6;
     }
 }
 
@@ -209,8 +209,8 @@ $tl-gap: 12px; // space between a line's end and the next ring
 
     li {
         font-family: v.$font-body;
-        font-size: 1.125rem;
-        line-height: 1.75;
+        font-size: 1.25rem;
+        line-height: 1.6;
     }
 
     li + li {

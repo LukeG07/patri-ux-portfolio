@@ -54,7 +54,7 @@ nav {
     align-items: center;
     gap: 0.75rem;
     font-family: v.$font-body;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     white-space: nowrap;
     .logo-symbol {
@@ -82,12 +82,12 @@ nav {
     gap: 4.5rem;
     list-style: none;
     li {
-        font-size: 1rem;
+        font-size: 1.25rem;
         line-height: 1;
     }
     a {
         font-family: v.$font-body;
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 400;
         &:hover,
         &:focus-visible {
@@ -276,9 +276,9 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     max-width: 38rem;
     margin-top: 2.25rem;
     font-family: v.$font-body;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.75;
+    line-height: 1.6;
 }
 
 .hero__scroll {
@@ -325,6 +325,10 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
         content: none;
     }
 
+    #logo {
+        font-size: 1rem;
+    }
+
     .hero {
         min-height: 0;
         padding: calc(#{$nav-height} + 1.5rem) 0 5rem;
@@ -332,7 +336,6 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
     .hero__intro {
         margin-top: 1rem;
-        font-size: 1rem;
     }
 
     .hero__scroll {
