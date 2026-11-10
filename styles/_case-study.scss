@@ -5,8 +5,8 @@
 // column. Figures can break out wider than the text; .case-panel is the
 // pink dashed box used for the role summary and call-outs.
 
-$text-width: 954px; // reading column, centred inside $work-width
-$wide-width: 1040px; // .case-figure--wide
+$text-width: 59.625rem; // reading column (954px at the 16px base), centred inside $work-width
+$wide-width: 65rem; // .case-figure--wide (1040px at the 16px base)
 $dash: #d39bb9;
 $title-size: 2.5rem; // .case-section__title
 $title-gap: 2.25rem; // space under .case-section__title
@@ -268,7 +268,7 @@ $title-gap: 2.25rem; // space under .case-section__title
 
 // slightly wider than the text column, still centred
 .case-figure--wide {
-    width: min(#{$wide-width}, 100vw - 2rem);
+    width: min(#{$wide-width}, 100vw - 5.25rem);
     margin-left: 50%;
     transform: translateX(-50%);
 }

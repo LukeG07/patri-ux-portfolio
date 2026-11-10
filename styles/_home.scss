@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 $nav-height: 80px;
-$content-width: 1140px;
+$content-width: 71.25rem; // 1140px at the 16px base
 
 // ---------- Nav (shared by every page) ----------
 
@@ -265,7 +265,7 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
         position: absolute;
         top: calc(100% + 1rem);
         left: calc((min(90vw, #{$content-width}) - 100vw) / 2);
-        width: calc((100vw - min(90vw, #{$content-width})) / 2 + 685px);
+        width: calc((100vw - min(90vw, #{$content-width})) / 2 + 42.8125rem);
         max-width: 100vw;
         height: 1px;
         background-color: rgba(255, 255, 255, 0.45);
@@ -329,6 +329,12 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
         font-size: 1rem;
     }
 
+    // same side margins as the page content below
+    nav,
+    .hero {
+        width: calc(100% - 5.25rem);
+    }
+
     .hero {
         min-height: 0;
         padding: calc(#{$nav-height} + 1.5rem) 0 5rem;
@@ -340,5 +346,12 @@ $hero-waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
     .hero__scroll {
         bottom: 1.25rem;
+    }
+}
+
+@include v.mobile {
+    // scale with the screen so "SANTAENGRACIA" fits between the side margins
+    .hero__title {
+        font-size: 8vw;
     }
 }

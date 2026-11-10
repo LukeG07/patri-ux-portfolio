@@ -187,7 +187,7 @@
     }
 
     .project-article {
-      padding: 4rem 6%;
+      padding: 4rem 2.625rem;
     }
 
     .tall-image {
@@ -198,6 +198,6 @@
 
 @include v.mobile {
     .project-article {
-        padding: 3rem 5%;
+        padding: 3rem 2.625rem;
     }
 }

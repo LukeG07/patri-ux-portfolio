@@ -62,6 +62,8 @@ Breakpoints are defined in [`styles/_variables.scss`](styles/_variables.scss):
 - Tablet: `≤ 768px`
 - Mobile: `≤ 480px`
 
+Above 1440px (the width the design is drawn at) the base font size grows with the window, up to 24px, and layout widths are in `rem`, so the whole page scales up instead of leaving wide empty margins. Size new layout widths in `rem` too. Below the tablet breakpoint, content sits 2.625rem (42px) from each edge.
+
 In your browser's dev tools, toggle the device toolbar (`Cmd+Shift+M` in Chrome) and test at roughly:
 
 - **375px** — small phone
