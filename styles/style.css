@@ -1174,11 +1174,6 @@ nav {
   border-radius: 2px;
 }
 
-.about__cv {
-  margin-top: 4.5rem;
-  text-align: center;
-}
-
 .journey {
   padding: 6rem 0 4rem;
 }
@@ -1291,9 +1286,6 @@ nav {
   }
   .about__portrait {
     aspect-ratio: 315/222;
-  }
-  .about__cv {
-    margin-top: 2.5rem;
   }
   .journey {
     padding: 2.5rem 0 1.5rem;
