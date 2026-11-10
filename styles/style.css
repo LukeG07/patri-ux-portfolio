@@ -1219,6 +1219,10 @@ nav {
   background-color: #66735a;
 }
 
+.journey__item:not(:last-child)::before {
+  bottom: -0.5rem;
+}
+
 .journey__item::after {
   content: "";
   position: absolute;

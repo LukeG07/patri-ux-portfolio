@@ -104,6 +104,7 @@ $ring-top: 40px; // where the vertical line ends, from the top of the portrait
 $tl-ring: 22px;
 $tl-x: 30px; // timeline line, from the content edge
 $tl-pad: 76px; // item text, from the content edge
+$tl-ring-top: 0.5rem; // ring, from the top of its item
 
 .journey {
     padding: 6rem 0 4rem;
@@ -149,10 +150,15 @@ $tl-pad: 76px; // item text, from the content edge
         background-color: v.$green-light;
     }
 
+    // run on into the next item's ring so the two meet with no gap
+    &:not(:last-child)::before {
+        bottom: -$tl-ring-top;
+    }
+
     &::after {
         content: "";
         position: absolute;
-        top: 0.5rem;
+        top: $tl-ring-top;
         left: calc(#{$tl-x} - #{$tl-ring} / 2 + 0.5px);
         width: $tl-ring;
         height: $tl-ring;
