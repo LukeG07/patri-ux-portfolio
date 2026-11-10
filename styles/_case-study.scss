@@ -7,8 +7,6 @@
 
 $text-width: 954px; // reading column, centred inside $work-width
 $wide-width: 1040px; // .case-figure--wide
-$ring: 24px;
-$ring-blue: #586d9a;
 $dash: #d39bb9;
 
 .case-study {
@@ -82,19 +80,6 @@ $dash: #d39bb9;
 
     > * + * {
         margin-top: 1.5rem;
-    }
-
-    // optional ring on the decorative line, level with the section heading
-    &--ring::before {
-        content: "";
-        position: absolute;
-        top: 0.5rem;
-        // the section is centred in the work column, so step back out to the line
-        left: calc((100% - min(90vw, #{v.$work-width})) / 2 - #{v.$deco-offset} - #{$ring} / 2 + 0.5px);
-        width: $ring;
-        height: $ring;
-        border: 1px solid $ring-blue;
-        border-radius: 50%;
     }
 
     ul,
@@ -362,10 +347,6 @@ $dash: #d39bb9;
 
     .case-section + .case-section {
         margin-top: 4rem;
-    }
-
-    .case-section--ring::before {
-        content: none;
     }
 
     .case-section__title {

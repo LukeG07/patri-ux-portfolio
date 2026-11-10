@@ -101,7 +101,7 @@ Each role in "The journey so far" is a `<li class="journey__item">`. Add `journe
 Case study pages follow `new_design/case_study_template.png`; `html/fiverr-redesign.html` is a complete example to copy. The building blocks (styles in `styles/_case-study.scss`):
 
 - `.page-header.page-header--case` — title with the pink dot
-- `.case-section` with `.case-section__title` / `.case-section__subtitle`; add `case-section--ring` for a ring on the decorative line
+- `.case-section` with `.case-section__title` / `.case-section__subtitle`
 - `.case-overview` — overview text beside a `.case-panel` role box
 - `.case-panel.case-callout` — full-width pink dashed call-out
 - `.case-figure` (add `--wide` to break out of the text column), `.case-figure-pair` for two side by side, `.case-split` for an image beside text

@@ -1496,17 +1496,6 @@ nav {
   margin-top: 1.5rem;
 }
 
-.case-section--ring::before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: calc((100% - min(90vw, 1170px)) / 2 - 42px - 24px / 2 + 0.5px);
-  width: 24px;
-  height: 24px;
-  border: 1px solid #586d9a;
-  border-radius: 50%;
-}
-
 .case-section ul,
 .case-section ol {
   padding-left: 1.5rem;
@@ -1747,9 +1736,6 @@ nav {
   }
   .case-section + .case-section {
     margin-top: 4rem;
-  }
-  .case-section--ring::before {
-    content: none;
   }
   .case-section__title {
     font-size: 2rem;
