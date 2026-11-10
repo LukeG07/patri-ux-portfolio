@@ -1568,11 +1568,11 @@ nav {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 2.75rem;
-  align-items: center;
+  align-items: start;
 }
 
 .case-overview > * + * {
-  margin-top: 0;
+  margin-top: calc(2.5rem * 1.2 + 2.25rem);
 }
 
 .case-overview__text > * + * {
@@ -1749,6 +1749,9 @@ nav {
   .case-figure-pair--three {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 2rem;
+  }
+  .case-overview > * + * {
+    margin-top: 0;
   }
   .case-figure--wide {
     width: 100%;

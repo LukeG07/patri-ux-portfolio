@@ -8,6 +8,8 @@
 $text-width: 954px; // reading column, centred inside $work-width
 $wide-width: 1040px; // .case-figure--wide
 $dash: #d39bb9;
+$title-size: 2.5rem; // .case-section__title
+$title-gap: 2.25rem; // space under .case-section__title
 
 .case-study {
     overflow: clip; // trims the vertical line at the top of the page
@@ -98,13 +100,13 @@ $dash: #d39bb9;
 
 .case-section__title {
     font-family: v.$font-body;
-    font-size: 2.5rem;
+    font-size: $title-size;
     font-weight: 500;
     line-height: 1.2;
     color: v.$navy;
 
     & + * {
-        margin-top: 2.25rem;
+        margin-top: $title-gap;
     }
 }
 
@@ -159,15 +161,16 @@ $dash: #d39bb9;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: 2.75rem;
-    align-items: center;
+    align-items: start;
 
+    // line the role card up with the first paragraph, below the heading
     > * + * {
-        margin-top: 0;
+        margin-top: calc(#{$title-size} * 1.2 + #{$title-gap});
     }
 }
 
 .case-overview__text > * + * {
-    margin-top: 2.25rem;
+    margin-top: $title-gap;
 }
 
 // ---------- Dashed panel (role, call-outs) ----------
@@ -363,6 +366,10 @@ $dash: #d39bb9;
     .case-figure-pair--three {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 2rem;
+    }
+
+    .case-overview > * + * {
+        margin-top: 0;
     }
 
     .case-figure--wide {
