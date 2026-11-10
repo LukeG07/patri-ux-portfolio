@@ -1,10 +1,7 @@
 @use "sass:meta";
 @use "variables" as v;
 html {
-    // The design is drawn at 1440px. Past that, scale everything that's sized
-    // in rem (type and layout widths) with the window, so wide screens fill
-    // out instead of growing empty margins.
-    font-size: clamp(16px, calc(100vw / 90), 24px);
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 *{
