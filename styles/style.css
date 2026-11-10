@@ -1220,7 +1220,7 @@ nav {
 }
 
 .journey__item:not(:last-child)::before {
-  bottom: -0.5rem;
+  bottom: calc(12px - 0.5rem);
 }
 
 .journey__item::after {
@@ -1228,6 +1228,7 @@ nav {
   position: absolute;
   top: 0.5rem;
   left: calc(30px - 22px / 2 + 0.5px);
+  box-sizing: border-box;
   width: 22px;
   height: 22px;
   border: 1px solid #66735a;

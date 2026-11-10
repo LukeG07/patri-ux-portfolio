@@ -105,6 +105,7 @@ $tl-ring: 22px;
 $tl-x: 30px; // timeline line, from the content edge
 $tl-pad: 76px; // item text, from the content edge
 $tl-ring-top: 0.5rem; // ring, from the top of its item
+$tl-gap: 12px; // space between a line's end and the next ring
 
 .journey {
     padding: 6rem 0 4rem;
@@ -150,9 +151,9 @@ $tl-ring-top: 0.5rem; // ring, from the top of its item
         background-color: v.$green-light;
     }
 
-    // run on into the next item's ring so the two meet with no gap
+    // stop just short of the next item's ring
     &:not(:last-child)::before {
-        bottom: -$tl-ring-top;
+        bottom: calc(#{$tl-gap} - #{$tl-ring-top});
     }
 
     &::after {
@@ -160,6 +161,7 @@ $tl-ring-top: 0.5rem; // ring, from the top of its item
         position: absolute;
         top: $tl-ring-top;
         left: calc(#{$tl-x} - #{$tl-ring} / 2 + 0.5px);
+        box-sizing: border-box; // keep the border inside, so the ring centres on the line
         width: $tl-ring;
         height: $tl-ring;
         border: 1px solid v.$green-light;
